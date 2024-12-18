@@ -5,16 +5,19 @@ from PyQt5.QtWidgets import (
     QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QLabel,
     QComboBox, QTextEdit, QHBoxLayout, QCheckBox, QProgressBar, QApplication
 )
-from PyQt5.QtCore import QThread, pyqtSignal, Qt, pyqtSlot
+from PyQt5.QtCore import QThread, pyqtSignal, Qt, QEventLoop, QTimer
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent
-from automation import automate_listing_creation, bulk_draft_deletion
+from automation import automate_listing_creation, automate_listing_edit, bulk_draft_deletion
 
 # --- Worker Thread ---
 class AutomationWorker(QThread):
-    status_signal = pyqtSignal(str)
+    status_signal = pyqtSignal(str)  # Signal to send status updates
+    finished_signal = pyqtSignal()   # Signal to indicate completion
 
-    def __init__(self, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review):
+    def __init__(self, headless, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review):
         super().__init__()
+        # Initialize worker parameters
+        self.headless = headless
         self.folder_path = folder_path
         self.auto_option = auto_option
         self.desc_text = desc_text
@@ -27,14 +30,26 @@ class AutomationWorker(QThread):
 
     def run(self):
         try:
+            # Emit status update indicating the task is starting
             self.status_signal.emit("Running automation...")
+            
             if self.auto_option == "Upload Single 3D Model" or self.auto_option == "Upload Multiple 3D Model":
-                automate_listing_creation(self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
+                # Call the automation function for model upload
+                automate_listing_creation(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
             elif self.auto_option == "Bulk Delete":
-                bulk_draft_deletion()
+                # Call the bulk deletion function
+                bulk_draft_deletion(self.headless)
+            elif self.auto_option == "Edit Model":
+                automate_listing_edit(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
+
+            # Emit status update indicating the task is completed
             self.status_signal.emit("Automation completed!")
         except Exception as e:
+            # Emit error message if an exception occurs
             self.status_signal.emit(f"Error: {str(e)}")
+        finally:
+            # Emit finished signal when task is done
+            self.finished_signal.emit()
 
 
 # --- Custom Widgets ---
@@ -101,6 +116,7 @@ class AutomationGUI(QMainWindow):
         self.tags = self.initialize_tags()
         self.prices = self.initialize_prices()
         self.submit_for_rev = False
+        self.headless = False
         self.setStyleSheet("""
             QMainWindow {
                 background: #3a3a3a;
@@ -192,6 +208,8 @@ class AutomationGUI(QMainWindow):
         self.create_add_description_section(layout)
         self.create_folder_section(layout)
         self.create_submit_checkbox(layout)
+        layout.addSpacing(5)
+        self.create_headless_checkbox(layout)
         layout.addSpacing(50)
         self.create_buttons_section(layout)
         layout.addStretch()
@@ -199,7 +217,7 @@ class AutomationGUI(QMainWindow):
     # --- UI Sections ---
     def create_dropdown_section(self, layout):
         self.dropdown = QComboBox()
-        self.dropdown.addItems(["Upload Single 3D Model", "Upload Multiple 3D Model", "Bulk Delete"])
+        self.dropdown.addItems(["Upload Single 3D Model", "Upload Multiple 3D Model", "Edit Model", "Bulk Delete"])
         self.dropdown.currentIndexChanged.connect(self.update_ui)
         layout.addWidget(self.dropdown)
 
@@ -262,6 +280,11 @@ class AutomationGUI(QMainWindow):
         self.checkbox.stateChanged.connect(self.on_checkbox_toggled)
         layout.addWidget(self.checkbox)
 
+    def create_headless_checkbox(self, layout):
+        self.hcheckbox = QCheckBox("Headless Mode")
+        self.hcheckbox.stateChanged.connect(self.headless_toggle)
+        layout.addWidget(self.hcheckbox)
+
     def create_buttons_section(self, layout):
         hbox = QHBoxLayout()
 
@@ -299,36 +322,60 @@ class AutomationGUI(QMainWindow):
     def update_selected_tags_display(self):
         self.selected_tags_label.setText(f"Selected Tags: {', '.join(self.selected_tags)}")
 
+    def periodic_function(self, current_value, dir_len):
+        if(self.progress_bar.value() < current_value // dir_len):
+            self.progress_bar.setValue(current_value + 1)
+            QApplication.processEvents()
+
     def start_automation(self, layout):
         automaton = self.dropdown.currentText()
         folder_path = self.folder_drop_widget.folder_path
         desc_text = self.textbox.toPlainText()
         if automaton != 'Bulk Delete' and (not folder_path or not self.cat_option):
             self.status_label.setText("Missing required fields.")
-            return
+            if automaton == 'Edit Model' and folder_path:
+                ...
+            else:
+                return
 
-        if automaton == 'Upload Single 3D Model' or automaton == 'Bulk Delete':
-            self.worker_thread = AutomationWorker(folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+        if automaton == 'Upload Single 3D Model' or automaton == 'Edit Model' or automaton == 'Bulk Delete':
+            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
             self.worker_thread.status_signal.connect(self.update_status)
             self.worker_thread.start()
         
         else:
+            dir_len = len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs])
             self.progress_bar = QProgressBar(self)
-            self.progress_bar.setRange(0, len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs])+1)
-            self.progress_bar.setValue(1)
+            self.progress_bar.setRange(0, 1000)
+            self.progress_bar.setValue(0)
             layout.addWidget(self.progress_bar)
 
             for root, dirs, files in os.walk(folder_path):
                 for dir_name in dirs:
                     folder_path = f"{root}/{dir_name}"
-                    self.worker_thread = AutomationWorker(folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+                    self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
                     self.worker_thread.status_signal.connect(self.update_status)
-                    self.worker_thread.start()
-                    self.worker_thread.wait()
                     
                     current_value = self.progress_bar.value()
-                    self.progress_bar.setValue(current_value + 1)
                     QApplication.processEvents()
+
+                    self.worker_thread.start()
+                    # self.worker_thread.wait()
+                    
+                    loop = QEventLoop()
+                    self.worker_thread.finished_signal.connect(loop.quit)
+
+                    timer = QTimer()
+                    timer.timeout.connect(lambda: self.periodic_function(current_value, dir_len))
+                    timer.start(100)
+
+                    loop.exec_()
+                    timer.stop()
+                    
+                    self.progress_bar.setValue(current_value + 1000 // dir_len)
+            
+            self.progress_bar.setValue(1000)
+                    
 
     def update_status(self, message):
         self.status_label.setText(message)
@@ -350,6 +397,23 @@ class AutomationGUI(QMainWindow):
             self.folder_drop_widget.setDisabled(True)
             self.folder_drop_widget.folder_label.setText("Folder selection not required for Bulk Delete.")
             self.checkbox.setVisible(False)
+            self.hcheckbox.setVisible(True)
+        elif self.auto_option == 'Edit Model':
+            self.label.setVisible(False)
+            self.textbox.setVisible(False)
+            self.cat_dropdown.setVisible(False)
+            self.tag_dropdown.setVisible(True)
+            self.selected_tags_label.setVisible(True)
+            self.price_label.setVisible(True)
+            self.price_dropdown.setVisible(True)
+            self.pro_price_label.setVisible(True)
+            self.pro_price_dropdown.setVisible(True)
+            self.add_label.setVisible(True)
+            self.add_textbox.setVisible(True)
+            self.folder_drop_widget.setDisabled(False)
+            self.folder_drop_widget.folder_label.setText("Drop a folder here")
+            self.checkbox.setVisible(True)
+            self.hcheckbox.setVisible(True)
         else:
             self.label.setVisible(True)
             self.textbox.setVisible(True)
@@ -365,6 +429,7 @@ class AutomationGUI(QMainWindow):
             self.folder_drop_widget.setDisabled(False)
             self.folder_drop_widget.folder_label.setText("Drop a folder here")
             self.checkbox.setVisible(True)
+            self.hcheckbox.setVisible(True)
         
     def update_category(self):
         self.cat_option = self.cat_dropdown.currentText()
@@ -374,6 +439,13 @@ class AutomationGUI(QMainWindow):
             self.submit_for_rev = True
         else:  # 0 means Unchecked
             self.submit_for_rev = False
+
+    def headless_toggle(self, state):
+        if state == 2: 
+            self.headless = True
+        else:  # 0 means Unchecked
+            self.headless = False 
+                        
 
 
 def main():

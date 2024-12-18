@@ -11,6 +11,10 @@ from selenium.common.exceptions import NoSuchElementException
 from config import USER_DATA_DIR, USER_AGENT, WEBSITE_URL
 from fallback import handle_error
 from logger import log_info
+from automation_func import (
+    info_init, price_select, upload_images_func, file_upload, file_upload_next,
+    edit_init
+    )
 
 # Kill all running chrome processes
 def kill_existing_chrome():
@@ -21,17 +25,17 @@ def kill_existing_chrome():
     else:
         subprocess.call(["pkill", "chrome"])
 
-def initialize_driver():
+def initialize_driver(headless=False):
     kill_existing_chrome()
 
     # Configure Chrome options
     chrome_options = Options()
     chrome_options.add_argument(f"user-data-dir={USER_DATA_DIR}")
     chrome_options.add_argument(f"user-agent={USER_AGENT}")
-    # chrome_options.add_argument("--headless")
-    # chrome_options.add_argument("--disable-gpu")
-    # chrome_options.add_argument("--no-sandbox")
-    # chrome_options.add_experimental_option("debuggerAddress", "127.0.0.1:7898")
+    if(headless):
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--disable-gpu")
+        chrome_options.add_argument("--no-sandbox")
     chrome_options.add_experimental_option("excludeSwitches", ["enable-logging", "enable-automation"])
     driver_service = webdriver.ChromeService()
 
@@ -39,29 +43,27 @@ def initialize_driver():
     driver = webdriver.Chrome(service=driver_service, options=chrome_options)
     return driver
 
-def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review):
-    driver = initialize_driver()
+def automate_listing_creation(headless, folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review):
+    driver = initialize_driver(headless)
     try:
         driver.get(WEBSITE_URL)
         log_info(f"Opened URL: {WEBSITE_URL}")
 
-        create_listings = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Hidden-down--mobile')))
-        create_listings[1].click()
-
-        asset_3d = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, '3d-model')))
-        asset_3d.click()
-
-        confirm_selection = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-        if confirm_selection.get_attribute('aria-label') == "Confirm selected option: 3d-model":
-            confirm_selection.click()
+        info_init(driver)
         
+        # =========================== Information Input Page =========================== #
         input_list = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.tKmud1ea .fabkit-InputContainer-root.fabkit-InputContainer--md')))
-        input_list[0].find_element(By.TAG_NAME, 'input').send_keys(folder_path.split("/")[-1])
         
+        # Model Title ===========================
+        title_box = input_list[0].find_element(By.TAG_NAME, 'input')
+        title_box.send_keys(folder_path.split("/")[-1])
+        
+        # Description Text ===========================
         if desc_text:
             description = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose')))
             driver.execute_script("arguments[0].innerHTML = arguments[1];", description, '<p>{}</p>'.format(desc_text))
         
+        # Category of Model ===========================
         category = input_list[2].find_element(By.TAG_NAME, 'input')
         category.click()
         list_of_cats = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Dropdown-container li .fabkit-TreeSelectOption-label')))
@@ -69,210 +71,156 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
             if i.get_attribute('innerHTML').replace("&amp;", "&") == cat_text:
                 i.click()
                 break
-
+        
+        # License type & price ===========================
         agreement_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Radio-root.fabkit-Radio--md')))
         agreement_inputs[0].click()
 
         price_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-InputContainer-root.fabkit-InputContainer--md')))
         price_inputs[5].click()
-        price_dropdown = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-Dropdown-container')))
-        price_list = WebDriverWait(price_dropdown, 20).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'li')))
-        for i in price_list:
-            if(i.get_attribute('innerHTML') == price):
-                i.click()
-                break
+
+        price_select(driver, price)
 
         time.sleep(0.1)
         price_inputs[6].click()
         time.sleep(0.1)
 
-        pro_price_dropdown = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-Dropdown-container')))
-        pro_price_list = WebDriverWait(pro_price_dropdown, 20).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'li')))
-        for i in pro_price_list:
-            if(i.get_attribute('innerHTML') == pro_price):
-                i.click()
-                break
+        price_select(driver, pro_price)
 
+        # Product Tags ===========================
         tags_input = input_list[3].find_element(By.TAG_NAME, 'input')
         for i in tags:
             tags_input.send_keys(i)
             time.sleep(1)
             tags_input.send_keys(Keys.ARROW_DOWN)
-            time.sleep(0.5)
+            time.sleep(0.1)
             tags_input.send_keys(Keys.RETURN)
-            time.sleep(0.5)
+            time.sleep(0.1)
         
+        # Product Preview Image ===========================
         preview_img_upload = driver.find_element(By.CSS_SELECTOR, "input.fabkit-ScreenReaderOnly-root")
         file_path = f"{folder_path}/preview_1.jpg"
         driver.execute_script("arguments[0].style.display = 'block';", preview_img_upload)
         preview_img_upload.send_keys(file_path)
 
-        time.sleep(1)
-
-        upload_images_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-6.fabkit-scale--gapY-spacing-6.fabkit-Stack--column.fabkit-Surface-root.fabkit-Surface--outlined.fabkit-scale--radius-2.fabkit-scale--gutterX-spacing-6.fabkit-scale--gutterY-spacing-6 .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
-        upload_images_btn.click()
-        choose_img_dropdown = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Dropdown-container .fabkit-List-item.fabkit-List--interactive.fabkit-List--rounded')
-        choose_img_dropdown[0].click()
-        upload_images_input = driver.find_element(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column.fabkit-Modal-content input.fabkit-ScreenReaderOnly-root')
-        driver.execute_script("arguments[0].style.display = 'block';", upload_images_input)
-        upload_images_input.send_keys("\n".join([os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.startswith("preview")]))
-        confirm_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
-        confirm_btn.click()
-
-        try:
-            WebDriverWait(driver, 30).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, ".fabkit-Modal-container"))
-            )
-        except Exception as e:
-            print("Timed out waiting for modal to disappear.")
-
-        agreement_inputs[2].click()
+        upload_images_func(driver, folder_path)
 
         time.sleep(0.1)
-
-        driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Agreements Button
-
+        agreement_inputs[2].click() # Mature content
         time.sleep(0.1)
-        upload_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".fabkit-Surface-root.fabkit-Surface--outlined.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-scale--gutterX-spacing-5.fabkit-scale--gutterY-spacing-6.kUuzwc_J button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth")))
-        upload_model_btn.click()
-
+        driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Disallow use by Generative AI Programs
         time.sleep(0.1)
 
-        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in range(len(upload_buttons)):
-            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
-            if(type_of_model == 'OBJ'):
-                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
-                uke_btn.click()
-                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-                uk_btn.click()
-                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
-                driver.execute_script("arguments[0].style.display = 'block';", model_input)
-                model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".obj")), None))
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                break
-        
-        try:
-            WebDriverWait(driver, 20).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, ".fabkit-Modal-container"))
-            )
-        except Exception as e:
-            print("Timed out waiting for modal to disappear.")
-        
-        time.sleep(2)
-        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
-        upload_next_model_btn.click()
-
-        time.sleep(0.1)
-
-        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in range(len(upload_buttons)):
-            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
-            if(type_of_model == 'FBX'):
-                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
-                uke_btn.click()
-                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-                uk_btn.click()
-                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
-                driver.execute_script("arguments[0].style.display = 'block';", model_input)
-                model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".fbx")), None))
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                break
-        
-        try:
-            WebDriverWait(driver, 20).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, ".fabkit-Modal-container"))
-            )
-        except Exception as e:
-            print("Timed out waiting for modal to disappear.")
-
-        time.sleep(2)
-        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
-        upload_next_model_btn.click()
-
-        time.sleep(0.1)
-
-        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in range(len(upload_buttons)):
-            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
-            if(type_of_model == 'GLB'):
-                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
-                uke_btn.click()
-                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-                uk_btn.click()
-                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
-                driver.execute_script("arguments[0].style.display = 'block';", model_input)
-                model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".glb")), None))
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                break
-
-        try:
-            WebDriverWait(driver, 20).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, ".fabkit-Modal-container"))
-            )
-        except Exception as e:
-            print("Timed out waiting for modal to disappear.")
-
-        time.sleep(2)
-        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
-        upload_next_model_btn.click()
-
-        time.sleep(0.1)
-
-        upload_buttons =  WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in range(len(upload_buttons)):
-            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
-            if(type_of_model == 'Additional files'):
-                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
-                uke_btn.click()
-                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-                uk_btn.click()
-                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
-                driver.execute_script("arguments[0].style.display = 'block';", model_input)
-                model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".zip")), None))
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                break
-
-        try:
-            WebDriverWait(driver, 20).until(
-                EC.invisibility_of_element_located((By.CSS_SELECTOR, ".fabkit-Modal-container"))
-            )
-        except Exception as e:
-            print("Timed out waiting for modal to disappear.")
-        
-        time.sleep(1)
-        
-        if(additional_desc):
-            add_desc = driver.find_element(By.CSS_SELECTOR, '.tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose')
-            driver.execute_script(f"arguments[0].innerHTML = '<p>{additional_desc}</p>';", add_desc)
+        file_upload(driver, folder_path, "OBJ", ".obj")
+        file_upload_next(driver, folder_path, "FBX", ".fbx")
+        file_upload_next(driver, folder_path, "GLB", ".glb")
+        file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
 
         if(submit_for_review):
             submit_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
             submit_btn.click()
-
-            proceed_with_conversion_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--secondary')
+            time.sleep(0.1)
+            proceed_with_conversion_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--secondary')))
             proceed_with_conversion_btn.click()
-
-            final_confirmation_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
+            time.sleep(0.1)
+            final_confirmation_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
             final_confirmation_btn.click()
-
-            close_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
+            time.sleep(0.1)
+            close_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
             close_btn.click()
-        else:
-            time.sleep(2)
-            # driver.find_element(By.CSS_SELECTOR, '.fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Paragraph--sm.fabkit-Paragraph--regular.fabkit-Link-root.fabkit-Link--primary.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-1.fabkit-scale--gapY-spacing-1').click()
 
     except NoSuchElementException as e:
-        handle_error(driver, "Element not found: " + str(e))
+        handle_error(driver, "Element not found: " + str(e) + f"\n{folder_path}")
     except Exception as e:
-        handle_error(driver, "Unexpected error: " + str(e))
+        handle_error(driver, "Unexpected error: " + str(e) + f"\n{folder_path}")
     finally:
         time.sleep(2)
         driver.quit()
         log_info("Driver closed.")
 
-def bulk_draft_deletion():
-    driver = initialize_driver()
+def automate_listing_edit(headless, folder_path, tags, price, pro_price, additional_desc, submit_for_review):
+    driver = initialize_driver(headless)
+    try:
+        driver.get(WEBSITE_URL)
+        log_info(f"Opened URL: {WEBSITE_URL}")
+
+        edit_init(driver, folder_path.split('/')[-1])
+
+        # =========================== Information Input Page =========================== #
+        input_list = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.tKmud1ea .fabkit-InputContainer-root.fabkit-InputContainer--md')))
+        
+        # License type & price ===========================
+        agreement_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Radio-root.fabkit-Radio--md')))
+        agreement_inputs[0].click()
+
+        price_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-InputContainer-root.fabkit-InputContainer--md')))
+        price_inputs[5].click()
+
+        price_select(driver, price)
+
+        time.sleep(0.1)
+        price_inputs[6].click()
+        time.sleep(0.1)
+
+        price_select(driver, pro_price)
+        time.sleep(0.1)
+
+        # Product Tags ===========================
+        tags_input = driver.find_element(By.CSS_SELECTOR, 'input[aria-describedby=" tagsDesc tagsCount"]')
+        p_tags = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Tag-root.fabkit-Tag--md.fabkit-Tag--deletable span')
+        p_lis = [i.get_attribute('innerHTML') for i in p_tags]
+        for i in tags:
+            if i not in p_lis:
+                tags_input.send_keys(i)
+                time.sleep(1)
+                tags_input.send_keys(Keys.ARROW_DOWN)
+                time.sleep(0.1)
+                tags_input.send_keys(Keys.RETURN)
+                time.sleep(0.1)
+        
+        # Product Preview Image ===========================
+        preview_img_upload = driver.find_element(By.CSS_SELECTOR, "input.fabkit-ScreenReaderOnly-root")
+        file_path = f"{folder_path}/preview_1.jpg"
+        driver.execute_script("arguments[0].style.display = 'block';", preview_img_upload)
+        preview_img_upload.send_keys(file_path)
+
+        upload_images_func(driver, folder_path)
+
+        time.sleep(0.1)
+        agreement_inputs[2].click() # Mature content
+        time.sleep(0.1)
+        driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Disallow use by Generative AI Programs
+        time.sleep(0.1)
+
+        file_upload_next(driver, folder_path, "OBJ", ".obj")
+        file_upload_next(driver, folder_path, "FBX", ".fbx")
+        file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
+
+        # Submit for Review or Safe as draft ===========================
+        if(submit_for_review):
+            submit_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
+            submit_btn.click()
+            time.sleep(0.1)
+            proceed_with_conversion_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--secondary')))
+            proceed_with_conversion_btn.click()
+            time.sleep(0.1)
+            final_confirmation_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+            final_confirmation_btn.click()
+            time.sleep(0.1)
+            close_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container .fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+            close_btn.click()
+
+    except NoSuchElementException as e:
+        handle_error(driver, "Element not found: " + str(e) + f"\n{folder_path}")
+    except Exception as e:
+        handle_error(driver, "Unexpected error: " + str(e) + f"\n{folder_path}")
+    finally:
+        time.sleep(2)
+        driver.quit()
+        log_info("Driver closed.")
+
+def bulk_draft_deletion(headless):
+    driver = initialize_driver(headless)
     try:
         driver.get(WEBSITE_URL)
         log_info(f"Opened URL: {WEBSITE_URL}")

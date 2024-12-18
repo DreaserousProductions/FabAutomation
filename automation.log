@@ -348,3 +348,1760 @@ Stacktrace:
 	BaseThreadInitThunk [0x00007FF89FBC259D+29]
 	RtlUserThreadStart [0x00007FF8A164AF38+40]
 
+2024-12-18 12:25:06,546 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:25:10,027 - INFO - A draft has been deleted
+2024-12-18 12:25:12,574 - INFO - A draft has been deleted
+2024-12-18 12:25:15,075 - INFO - A draft has been deleted
+2024-12-18 12:25:17,797 - INFO - A draft has been deleted
+2024-12-18 12:25:22,188 - INFO - Driver closed.
+2024-12-18 12:25:44,666 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:26:42,337 - INFO - Driver closed.
+2024-12-18 12:26:46,930 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:27:42,261 - INFO - Driver closed.
+2024-12-18 12:27:46,934 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:28:45,726 - INFO - Driver closed.
+2024-12-18 12:28:50,115 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:29:48,194 - INFO - Driver closed.
+2024-12-18 12:29:52,385 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:30:47,252 - INFO - Driver closed.
+2024-12-18 12:30:52,383 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:31:52,356 - INFO - Driver closed.
+2024-12-18 12:31:56,585 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:32:57,540 - INFO - Driver closed.
+2024-12-18 12:33:01,909 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:33:57,648 - INFO - Driver closed.
+2024-12-18 12:34:02,333 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:35:21,885 - INFO - Driver closed.
+2024-12-18 12:35:26,413 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:36:27,902 - INFO - Driver closed.
+2024-12-18 12:36:32,398 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:37:31,900 - INFO - Driver closed.
+2024-12-18 12:37:36,873 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:38:38,284 - INFO - Driver closed.
+2024-12-18 13:03:30,206 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:05:37,494 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:05:41,112 - INFO - A draft has been deleted
+2024-12-18 13:05:43,631 - INFO - A draft has been deleted
+2024-12-18 13:05:46,166 - INFO - A draft has been deleted
+2024-12-18 13:05:48,721 - INFO - A draft has been deleted
+2024-12-18 13:05:51,164 - INFO - A draft has been deleted
+2024-12-18 13:05:53,603 - INFO - A draft has been deleted
+2024-12-18 13:05:55,913 - INFO - A draft has been deleted
+2024-12-18 13:05:58,229 - INFO - A draft has been deleted
+2024-12-18 13:06:00,693 - INFO - A draft has been deleted
+2024-12-18 13:06:03,040 - INFO - A draft has been deleted
+2024-12-18 13:06:05,533 - INFO - A draft has been deleted
+2024-12-18 13:06:07,980 - INFO - A draft has been deleted
+2024-12-18 13:06:10,472 - INFO - A draft has been deleted
+2024-12-18 13:06:14,842 - INFO - Driver closed.
+2024-12-18 13:10:22,984 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:11:20,722 - INFO - Driver closed.
+2024-12-18 13:11:25,068 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:12:20,014 - INFO - Driver closed.
+2024-12-18 13:12:24,745 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:13:23,782 - INFO - Driver closed.
+2024-12-18 13:13:28,137 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:14:34,658 - INFO - Driver closed.
+2024-12-18 13:14:38,818 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:15:36,895 - INFO - Driver closed.
+2024-12-18 13:15:41,062 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:16:41,620 - INFO - Driver closed.
+2024-12-18 13:16:45,767 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:17:29,359 - ERROR - Unexpected error: Message: 
+
+2024-12-18 13:22:07,614 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:23:05,452 - INFO - Driver closed.
+2024-12-18 13:23:09,673 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:24:09,543 - INFO - Driver closed.
+2024-12-18 13:24:14,188 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:25:14,491 - INFO - Driver closed.
+2024-12-18 13:25:18,901 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:26:30,900 - INFO - Driver closed.
+2024-12-18 13:26:35,519 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:27:36,236 - INFO - Driver closed.
+2024-12-18 13:27:40,319 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:28:42,868 - INFO - Driver closed.
+2024-12-18 13:39:27,402 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:39:33,213 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:39:37,301 - INFO - Driver closed.
+2024-12-18 13:39:39,080 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:39:45,259 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:39:49,292 - INFO - Driver closed.
+2024-12-18 13:39:54,743 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:40:00,805 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:40:04,863 - INFO - Driver closed.
+2024-12-18 13:40:06,212 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:40:11,850 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:40:15,973 - INFO - Driver closed.
+2024-12-18 13:40:16,963 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:40:28,849 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:40:31,100 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:40:35,140 - INFO - Driver closed.
+2024-12-18 13:41:27,157 - INFO - Driver closed.
+2024-12-18 13:41:33,448 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:41:39,709 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:41:43,775 - INFO - Driver closed.
+2024-12-18 13:41:46,152 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:41:55,258 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E4F4F5]
+	(No symbol) [0x00007FF768EF6247]
+	(No symbol) [0x00007FF768F0ECE2]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:41:59,292 - INFO - Driver closed.
+2024-12-18 13:42:00,793 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:43:00,587 - INFO - Driver closed.
+2024-12-18 13:44:02,766 - INFO - Driver closed.
+2024-12-18 13:44:33,267 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:44:40,608 - INFO - Driver closed.
+2024-12-18 13:44:44,025 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:44:51,061 - INFO - Driver closed.
+2024-12-18 13:44:51,487 - ERROR - Unexpected error: Message: disconnected: Unable to receive message from renderer
+  (failed to check if window was closed: disconnected: not connected to DevTools)
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E63992]
+	(No symbol) [0x00007FF768E6365A]
+	(No symbol) [0x00007FF768E62515]
+	(No symbol) [0x00007FF768E8447A]
+	(No symbol) [0x00007FF768F0F75A]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:44:55,527 - INFO - Driver closed.
+2024-12-18 13:45:00,199 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:07,233 - INFO - Driver closed.
+2024-12-18 13:45:07,264 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:12,074 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:14,286 - INFO - Driver closed.
+2024-12-18 13:45:16,547 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:19,101 - INFO - Driver closed.
+2024-12-18 13:45:21,832 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:23,582 - INFO - Driver closed.
+2024-12-18 13:45:28,066 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:45:29,969 - INFO - Driver closed.
+2024-12-18 13:45:35,574 - INFO - Driver closed.
+2024-12-18 13:46:42,454 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:46:45,997 - INFO - A draft has been deleted
+2024-12-18 13:46:48,578 - INFO - A draft has been deleted
+2024-12-18 13:46:51,105 - INFO - A draft has been deleted
+2024-12-18 13:46:53,687 - INFO - A draft has been deleted
+2024-12-18 13:46:56,239 - INFO - A draft has been deleted
+2024-12-18 13:46:58,591 - INFO - A draft has been deleted
+2024-12-18 13:47:01,034 - INFO - A draft has been deleted
+2024-12-18 13:47:03,525 - INFO - A draft has been deleted
+2024-12-18 13:47:05,842 - INFO - A draft has been deleted
+2024-12-18 13:47:08,241 - INFO - A draft has been deleted
+2024-12-18 13:47:10,745 - INFO - A draft has been deleted
+2024-12-18 13:47:13,278 - INFO - A draft has been deleted
+2024-12-18 13:47:15,658 - INFO - A draft has been deleted
+2024-12-18 13:47:18,122 - INFO - A draft has been deleted
+2024-12-18 13:47:20,532 - INFO - A draft has been deleted
+2024-12-18 13:47:23,093 - INFO - A draft has been deleted
+2024-12-18 13:47:25,579 - INFO - A draft has been deleted
+2024-12-18 13:47:28,002 - INFO - A draft has been deleted
+2024-12-18 13:47:30,414 - INFO - A draft has been deleted
+2024-12-18 13:47:32,858 - INFO - A draft has been deleted
+2024-12-18 13:47:35,354 - INFO - A draft has been deleted
+2024-12-18 13:47:39,743 - INFO - Driver closed.
+2024-12-18 13:48:01,765 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:48:59,562 - INFO - Driver closed.
+2024-12-18 13:49:03,780 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:49:57,310 - INFO - Driver closed.
+2024-12-18 13:50:01,579 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:50:53,124 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 13:51:04,177 - INFO - Driver closed.
+2024-12-18 13:51:06,498 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:51:19,890 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0376 09Q 5415 Glasses
+2024-12-18 13:51:30,820 - INFO - Driver closed.
+2024-12-18 13:51:33,075 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:51:46,486 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 13:51:57,463 - INFO - Driver closed.
+2024-12-18 13:51:59,800 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:52:13,188 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0386 09Q 5515 Glasses
+2024-12-18 13:52:24,173 - INFO - Driver closed.
+2024-12-18 13:52:26,422 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:52:39,852 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0386 J5G 5515 Glasses
+2024-12-18 13:52:50,799 - INFO - Driver closed.
+2024-12-18 13:52:53,195 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:53:06,574 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0388 086 5317 Glasses
+2024-12-18 13:53:17,486 - INFO - Driver closed.
+2024-12-18 13:53:19,871 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:53:33,259 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0388 HKZ 5317 Glasses
+2024-12-18 13:53:44,299 - INFO - Driver closed.
+2024-12-18 13:53:46,577 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:53:59,968 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0393 086 5217 Glasses
+2024-12-18 13:54:11,003 - INFO - Driver closed.
+2024-12-18 13:54:13,310 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:54:26,700 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF M0079 6LB 5223 Glasses
+2024-12-18 13:54:37,725 - INFO - Driver closed.
+2024-12-18 13:54:40,024 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:54:53,418 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF0422 J5G 5717 Glasses
+2024-12-18 13:55:04,389 - INFO - Driver closed.
+2024-12-18 13:56:27,846 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:57:29,913 - INFO - Driver closed.
+2024-12-18 13:57:34,190 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:58:15,593 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E755B9]
+	(No symbol) [0x00007FF768ECA674]
+	(No symbol) [0x00007FF768EBCBA0]
+	(No symbol) [0x00007FF768EEF2FA]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0232 807 5315 Glasses
+2024-12-18 13:58:30,000 - INFO - Driver closed.
+2024-12-18 13:58:34,195 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 13:59:30,887 - INFO - Driver closed.
+2024-12-18 13:59:35,564 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:00:42,841 - INFO - Driver closed.
+2024-12-18 14:00:47,016 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:01:41,460 - INFO - Driver closed.
+2024-12-18 14:01:44,989 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:02:46,827 - INFO - Driver closed.
+2024-12-18 14:02:51,532 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:03:53,166 - INFO - Driver closed.
+2024-12-18 14:03:57,685 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:04:57,428 - INFO - Driver closed.
+2024-12-18 14:05:01,997 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:05:58,995 - ERROR - Element not found: Message: no such element: Unable to locate element: {"method":"css selector","selector":".tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose"}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768EC91BE]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768F12647]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0388 HKZ 5317 Glasses
+2024-12-18 14:06:14,638 - INFO - Driver closed.
+2024-12-18 14:06:19,150 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:07:41,091 - INFO - Driver closed.
+2024-12-18 14:07:45,396 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:08:48,973 - INFO - Driver closed.
+2024-12-18 14:08:53,627 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:09:58,340 - INFO - Driver closed.
+2024-12-18 14:11:56,613 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:12:53,278 - INFO - Driver closed.
+2024-12-18 14:12:58,064 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:13:51,073 - INFO - Driver closed.
+2024-12-18 14:13:55,471 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:14:49,904 - INFO - Driver closed.
+2024-12-18 14:14:54,517 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:16:06,307 - INFO - Driver closed.
+2024-12-18 14:16:10,882 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:17:02,831 - INFO - Driver closed.
+2024-12-18 14:17:07,612 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:18:02,587 - INFO - Driver closed.
+2024-12-18 14:18:07,459 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:18:58,336 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:19:08,007 - INFO - Driver closed.
+2024-12-18 14:19:13,054 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:19:26,669 - INFO - Driver closed.
+2024-12-18 14:19:32,104 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:19:42,124 - INFO - Driver closed.
+2024-12-18 14:19:46,538 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:19:56,743 - INFO - Driver closed.
+2024-12-18 14:20:01,596 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:20:11,553 - INFO - Driver closed.
+2024-12-18 14:20:16,444 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:20:26,046 - INFO - Driver closed.
+2024-12-18 14:20:30,678 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:20:40,294 - INFO - Driver closed.
+2024-12-18 14:20:46,547 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:20:56,578 - INFO - Driver closed.
+2024-12-18 14:21:01,191 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:21:10,860 - INFO - Driver closed.
+2024-12-18 14:21:15,220 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:21:24,774 - INFO - Driver closed.
+2024-12-18 14:21:29,657 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:22:11,750 - INFO - Driver closed.
+2024-12-18 14:22:16,228 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:22:25,722 - INFO - Driver closed.
+2024-12-18 14:22:59,140 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:23:08,568 - INFO - Driver closed.
+2024-12-18 14:23:13,427 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:23:22,935 - INFO - Driver closed.
+2024-12-18 14:23:27,778 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:23:37,338 - INFO - Driver closed.
+2024-12-18 14:23:41,822 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:23:51,254 - INFO - Driver closed.
+2024-12-18 14:23:55,801 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:24:05,891 - INFO - Driver closed.
+2024-12-18 14:24:10,224 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:24:19,704 - INFO - Driver closed.
+2024-12-18 14:24:24,255 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:24:33,968 - INFO - Driver closed.
+2024-12-18 14:24:38,530 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:24:48,083 - INFO - Driver closed.
+2024-12-18 14:24:52,463 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:25:02,392 - INFO - Driver closed.
+2024-12-18 14:25:07,010 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:25:16,928 - INFO - Driver closed.
+2024-12-18 14:25:21,099 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:25:31,570 - INFO - Driver closed.
+2024-12-18 14:25:34,980 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 14:26:33,195 - INFO - Driver closed.
+2024-12-18 16:06:28,553 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:06:42,472 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:06:54,301 - INFO - Driver closed.
+2024-12-18 16:08:38,447 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:08:51,497 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:09:02,686 - INFO - Driver closed.
+2024-12-18 16:11:01,346 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:11:14,750 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:11:21,382 - INFO - Driver closed.
+2024-12-18 16:13:58,121 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:14:02,188 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:14:13,196 - INFO - Driver closed.
+2024-12-18 16:14:47,165 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:14:51,228 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:16:51,227 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:17:51,104 - INFO - Driver closed.
+2024-12-18 16:25:21,261 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:26:13,911 - INFO - Driver closed.
+2024-12-18 16:27:27,460 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:28:22,788 - INFO - Driver closed.
+2024-12-18 16:29:48,513 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:30:46,300 - INFO - Driver closed.
+2024-12-18 16:32:56,738 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 16:34:01,102 - ERROR - Unexpected error: 'WebElement' object is not iterable
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 16:34:05,692 - INFO - Driver closed.
+2024-12-18 17:13:31,348 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:14:28,754 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:14:34,173 - INFO - Driver closed.
+2024-12-18 17:17:43,114 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:17:48,581 - INFO - Driver closed.
+2024-12-18 17:19:02,853 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:19:08,397 - INFO - Driver closed.
+2024-12-18 17:19:52,519 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:19:57,989 - INFO - Driver closed.
+2024-12-18 17:30:22,159 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:31:33,404 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:32:55,275 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 17:33:13,283 - INFO - Driver closed.
+2024-12-18 18:48:16,442 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 18:48:46,982 - ERROR - Unexpected error: object of type 'NoneType' has no len()
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 18:48:51,654 - INFO - Driver closed.
+2024-12-18 18:51:16,306 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:13:01,260 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:13:16,587 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748BDF4F5]
+	(No symbol) [0x00007FF748C86247]
+	(No symbol) [0x00007FF748C9ECE2]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 19:13:20,893 - INFO - Driver closed.
+2024-12-18 19:16:33,698 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:16:49,527 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:16:55,243 - INFO - Driver closed.
+2024-12-18 19:19:22,995 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:19:42,204 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:19:47,021 - INFO - Driver closed.
+2024-12-18 19:23:09,937 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:23:24,861 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:23:29,629 - INFO - Driver closed.
+2024-12-18 19:24:09,570 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:24:49,684 - ERROR - Unexpected error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C591BE]
+	(No symbol) [0x00007FF748C594AC]
+	(No symbol) [0x00007FF748CA2647]
+	(No symbol) [0x00007FF748C7F33F]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:24:54,222 - INFO - Driver closed.
+2024-12-18 19:29:21,076 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:29:35,954 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:29:40,516 - INFO - Driver closed.
+2024-12-18 19:31:23,990 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:31:28,095 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:31:32,809 - INFO - Driver closed.
+2024-12-18 19:33:45,294 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:33:49,461 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:33:54,129 - INFO - Driver closed.
+2024-12-18 19:34:38,944 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:36:34,304 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:37:22,238 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:37:27,135 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:37:31,706 - INFO - Driver closed.
+2024-12-18 19:38:36,261 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:38:41,103 - ERROR - Unexpected error: Message: element click intercepted: Element <div class="fabkit-InputContainer-root fabkit-InputContainer--md">...</div> is not clickable at point (851, 57). Other element would receive the click: <div class="fabkit-MegaMenu-header fabkit-Hidden-down--tablet">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:38:45,844 - INFO - Driver closed.
+2024-12-18 19:39:23,190 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:39:28,002 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:39:32,562 - INFO - Driver closed.
+2024-12-18 19:40:44,053 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:40:51,727 - ERROR - Unexpected error: Message: element click intercepted: Element <div class="fabkit-InputContainer-root fabkit-InputContainer--md">...</div> is not clickable at point (851, 428). Other element would receive the click: <li class="fabkit-List-item fabkit-List--interactive fabkit-List--rounded fabkit-Select-option" id=":r25:" role="option" data-value="45da1a2f292a46c78dab0c98c5181e9a_USD_99_1701881379601" aria-selected="false">...</li>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:40:56,274 - INFO - Driver closed.
+2024-12-18 19:42:10,481 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:42:19,879 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:42:24,408 - INFO - Driver closed.
+2024-12-18 19:43:36,890 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:43:38,944 - ERROR - Unexpected error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748BDF4F5]
+	(No symbol) [0x00007FF748C86247]
+	(No symbol) [0x00007FF748C9ECE2]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:43:43,052 - INFO - Driver closed.
+2024-12-18 19:43:54,546 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:44:04,221 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:44:08,808 - INFO - Driver closed.
+2024-12-18 19:44:54,754 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:44:58,275 - ERROR - Unexpected error: Message: javascript error: Failed to execute 'scrollIntoView' on 'Element': Failed to read the 'block' property from 'ScrollIntoViewOptions': The provided value 'top' is not a valid enum value of type ScrollLogicalPosition.
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C0C2ED]
+	(No symbol) [0x00007FF748C0F308]
+	(No symbol) [0x00007FF748CA06B0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:45:02,912 - INFO - Driver closed.
+2024-12-18 19:45:10,357 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:45:13,951 - ERROR - Unexpected error: Message: javascript error: Failed to execute 'scrollIntoView' on 'Element': Failed to read the 'block' property from 'ScrollIntoViewOptions': The provided value 'top' is not a valid enum value of type ScrollLogicalPosition.
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C0C2ED]
+	(No symbol) [0x00007FF748C0F308]
+	(No symbol) [0x00007FF748CA06B0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:45:18,754 - INFO - Driver closed.
+2024-12-18 19:46:09,783 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:46:13,266 - ERROR - Unexpected error: Message: javascript error: Failed to execute 'scrollIntoView' on 'Element': Failed to read the 'block' property from 'ScrollIntoViewOptions': The provided value 'bottom' is not a valid enum value of type ScrollLogicalPosition.
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C0C2ED]
+	(No symbol) [0x00007FF748C0F308]
+	(No symbol) [0x00007FF748CA06B0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:46:17,960 - INFO - Driver closed.
+2024-12-18 19:47:40,022 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:47:46,044 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:47:50,652 - INFO - Driver closed.
+2024-12-18 19:51:19,904 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:51:28,971 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:51:33,676 - INFO - Driver closed.
+2024-12-18 19:54:30,698 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:54:34,897 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:54:39,628 - INFO - Driver closed.
+2024-12-18 19:56:03,517 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:56:07,703 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:56:12,239 - INFO - Driver closed.
+2024-12-18 19:57:50,352 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:57:57,711 - ERROR - Unexpected error: Message: element click intercepted: Element <input id=":r1s:" type="number" autocomplete="off" autocorrect="off" spellcheck="false" role="combobox" aria-haspopup="true" aria-autocomplete="list" class="" placeholder="Select UEFN - Reference only price" aria-required="true" disabled="" value="" aria-expanded="false"> is not clickable at point (837, 453). Other element would receive the click: <div class="fabkit-Stack-root fabkit-scale--gapX-layout-6 fabkit-scale--gapY-layout-6 fabkit-Stack--column">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:58:02,358 - INFO - Driver closed.
+2024-12-18 19:59:06,903 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 19:59:13,788 - ERROR - Unexpected error: Message: element click intercepted: Element <input id=":r1s:" type="number" autocomplete="off" autocorrect="off" spellcheck="false" role="combobox" aria-haspopup="true" aria-autocomplete="list" class="" placeholder="Select UEFN - Reference only price" aria-required="true" disabled="" value="" aria-expanded="false"> is not clickable at point (837, 333). Other element would receive the click: <div class="fabkit-Stack-root fabkit-scale--gapX-layout-6 fabkit-scale--gapY-layout-6 fabkit-Stack--column">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 19:59:18,644 - INFO - Driver closed.
+2024-12-18 20:00:23,617 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:00:35,153 - ERROR - Unexpected error: Message: element click intercepted: Element <input id=":r1s:" type="number" autocomplete="off" autocorrect="off" spellcheck="false" role="combobox" aria-haspopup="true" aria-autocomplete="list" class="" placeholder="Select UEFN - Reference only price" aria-required="true" disabled="" value="" aria-expanded="false"> is not clickable at point (837, 332). Other element would receive the click: <li class="fabkit-List-item fabkit-List--interactive fabkit-List--rounded fabkit-Select-option" id=":r6m:" role="option" data-value="45da1a2f292a46c78dab0c98c5181e9a_USD_399_1701881381039" aria-selected="false">...</li>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:00:39,752 - INFO - Driver closed.
+2024-12-18 20:02:13,446 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:02:22,130 - ERROR - Unexpected error: Message: element click intercepted: Element <input id=":r1s:" type="number" autocomplete="off" autocorrect="off" spellcheck="false" role="combobox" aria-haspopup="true" aria-autocomplete="list" class="" placeholder="Select UEFN - Reference only price" aria-required="true" disabled="" value="" aria-expanded="false"> is not clickable at point (837, 253). Other element would receive the click: <li class="fabkit-List-item fabkit-List--interactive fabkit-List--rounded fabkit-Select-option" id=":r6m:" role="option" data-value="45da1a2f292a46c78dab0c98c5181e9a_USD_399_1701881381039" aria-selected="false">...</li>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:02:26,695 - INFO - Driver closed.
+2024-12-18 20:03:32,344 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:04:23,829 - ERROR - Unexpected error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C0C2ED]
+	(No symbol) [0x00007FF748C0EFCC]
+	(No symbol) [0x00007FF748C0F09F]
+	(No symbol) [0x00007FF748C60D79]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0167 F0G 5019 Glasses
+2024-12-18 20:04:28,511 - INFO - Driver closed.
+2024-12-18 20:08:07,245 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:08:11,954 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:08:16,546 - INFO - Driver closed.
+2024-12-18 20:09:26,526 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:09:31,118 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:09:35,731 - INFO - Driver closed.
+2024-12-18 20:11:40,357 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:11:45,739 - ERROR - Unexpected error: Message: element not interactable
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C055B9]
+	(No symbol) [0x00007FF748C52D14]
+	(No symbol) [0x00007FF748C50DAD]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:11:50,392 - INFO - Driver closed.
+2024-12-18 20:12:40,473 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:12:47,775 - ERROR - Unexpected error: Message: element click intercepted: Element <button class="fabkit-Button-root fabkit-Button--md fabkit-Button--primary" disabled="" type="button" data-testid="submitButton">...</button> is not clickable at point (891, 596). Other element would receive the click: <div class="fabkit-Stack-root fabkit-Stack--justify_space-between fabkit-scale--gapX-spacing-3 fabkit-scale--gapY-spacing-3 fabkit-Modal-actions fabkit-Modal-actions--auto">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:12:52,488 - INFO - Driver closed.
+2024-12-18 20:14:38,645 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:14:49,340 - ERROR - Unexpected error: Message: element click intercepted: Element <button class="fabkit-Button-root fabkit-Button--md fabkit-Button--primary" disabled="" type="button" data-testid="submitButton">...</button> is not clickable at point (891, 596). Other element would receive the click: <div class="fabkit-Stack-root fabkit-Stack--justify_space-between fabkit-scale--gapX-spacing-3 fabkit-scale--gapY-spacing-3 fabkit-Modal-actions fabkit-Modal-actions--auto">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:14:53,933 - INFO - Driver closed.
+2024-12-18 20:16:23,410 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:16:33,250 - ERROR - Unexpected error: Message: element click intercepted: Element <button class="fabkit-Button-root fabkit-Button--md fabkit-Button--primary" disabled="" type="button" data-testid="submitButton">...</button> is not clickable at point (891, 596). Other element would receive the click: <div class="fabkit-Stack-root fabkit-Stack--justify_space-between fabkit-scale--gapX-spacing-3 fabkit-scale--gapY-spacing-3 fabkit-Modal-actions fabkit-Modal-actions--auto">...</div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:16:37,947 - INFO - Driver closed.
+2024-12-18 20:18:36,454 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:19:22,057 - INFO - Driver closed.
+2024-12-18 20:22:47,545 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:22:55,317 - ERROR - Element not found: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[aria-describedby="tagsDesc tagsCount"]"}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C591BE]
+	(No symbol) [0x00007FF748C594AC]
+	(No symbol) [0x00007FF748CA2647]
+	(No symbol) [0x00007FF748C7F33F]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:22:59,936 - INFO - Driver closed.
+2024-12-18 20:24:44,688 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:24:57,238 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:25:01,886 - INFO - Driver closed.
+2024-12-18 20:25:28,312 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:25:40,451 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:25:45,094 - INFO - Driver closed.
+2024-12-18 20:26:11,119 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:26:23,072 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:26:27,776 - INFO - Driver closed.
+2024-12-18 20:30:59,175 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:31:58,027 - ERROR - Unexpected error: Message: element click intercepted: Element <button class="fabkit-Button-root fabkit-Button--md fabkit-Button--primary fabkit-Button--fullWidth" type="button">...</button> is not clickable at point (236, 606). Other element would receive the click: <div role="presentation" class="fabkit-Modal-overlay"></div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C60E8E]
+	(No symbol) [0x00007FF748C5E92C]
+	(No symbol) [0x00007FF748C5BAF6]
+	(No symbol) [0x00007FF748C5AA51]
+	(No symbol) [0x00007FF748C4CBA0]
+	(No symbol) [0x00007FF748C7F2FA]
+	(No symbol) [0x00007FF748C4C3F6]
+	(No symbol) [0x00007FF748C7F510]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:32:02,659 - INFO - Driver closed.
+2024-12-18 20:32:41,051 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:32:51,755 - ERROR - Unexpected error: list index out of range
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:32:56,342 - INFO - Driver closed.
+2024-12-18 20:35:03,563 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:35:52,188 - INFO - Driver closed.
+2024-12-18 20:38:30,663 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:38:34,109 - INFO - A draft has been deleted
+2024-12-18 20:38:36,526 - INFO - A draft has been deleted
+2024-12-18 20:38:38,930 - INFO - A draft has been deleted
+2024-12-18 20:38:41,448 - INFO - A draft has been deleted
+2024-12-18 20:38:43,911 - INFO - A draft has been deleted
+2024-12-18 20:38:46,443 - INFO - A draft has been deleted
+2024-12-18 20:38:48,915 - INFO - A draft has been deleted
+2024-12-18 20:38:51,503 - INFO - A draft has been deleted
+2024-12-18 20:38:53,949 - INFO - A draft has been deleted
+2024-12-18 20:38:56,463 - INFO - A draft has been deleted
+2024-12-18 20:38:59,031 - INFO - A draft has been deleted
+2024-12-18 20:39:01,544 - INFO - A draft has been deleted
+2024-12-18 20:39:04,135 - INFO - A draft has been deleted
+2024-12-18 20:39:06,619 - INFO - A draft has been deleted
+2024-12-18 20:39:09,125 - INFO - A draft has been deleted
+2024-12-18 20:39:11,453 - INFO - A draft has been deleted
+2024-12-18 20:39:13,770 - INFO - A draft has been deleted
+2024-12-18 20:39:16,155 - INFO - A draft has been deleted
+2024-12-18 20:39:18,613 - INFO - A draft has been deleted
+2024-12-18 20:39:24,061 - INFO - Driver closed.
+2024-12-18 20:43:26,395 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:44:10,910 - ERROR - Unexpected error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF748DF6CC5+28821]
+	(No symbol) [0x00007FF748D63850]
+	(No symbol) [0x00007FF748C0578A]
+	(No symbol) [0x00007FF748C591BE]
+	(No symbol) [0x00007FF748C594AC]
+	(No symbol) [0x00007FF748CA2647]
+	(No symbol) [0x00007FF748C7F33F]
+	(No symbol) [0x00007FF748C9F412]
+	(No symbol) [0x00007FF748C7F0A3]
+	(No symbol) [0x00007FF748C4A778]
+	(No symbol) [0x00007FF748C4B8E1]
+	GetHandleVerifier [0x00007FF74912FCCD+3408029]
+	GetHandleVerifier [0x00007FF74914743F+3504143]
+	GetHandleVerifier [0x00007FF74913B61D+3455469]
+	GetHandleVerifier [0x00007FF748EBBDCB+835995]
+	(No symbol) [0x00007FF748D6EB6F]
+	(No symbol) [0x00007FF748D6A824]
+	(No symbol) [0x00007FF748D6A9BD]
+	(No symbol) [0x00007FF748D5A1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0167 F0G 5019 Glasses
+2024-12-18 20:44:16,425 - INFO - Driver closed.
+2024-12-18 20:44:18,828 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:44:32,233 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0232 807 5315 Glasses
+2024-12-18 20:44:37,703 - INFO - Driver closed.
+2024-12-18 20:44:40,196 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:44:53,585 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0331 086 5415 Glasses
+2024-12-18 20:44:58,071 - INFO - Driver closed.
+2024-12-18 20:45:00,446 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:45:13,879 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0376 09Q 5415 Glasses
+2024-12-18 20:45:19,293 - INFO - Driver closed.
+2024-12-18 20:45:21,726 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:45:35,085 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-18 20:45:40,564 - INFO - Driver closed.
+2024-12-18 20:45:42,834 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:45:56,195 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0386 09Q 5515 Glasses
+2024-12-18 20:46:00,680 - INFO - Driver closed.
+2024-12-18 20:46:03,016 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:46:16,379 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0386 J5G 5515 Glasses
+2024-12-18 20:46:20,884 - INFO - Driver closed.
+2024-12-18 20:46:23,504 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:46:36,874 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0388 086 5317 Glasses
+2024-12-18 20:46:42,384 - INFO - Driver closed.
+2024-12-18 20:46:44,711 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:46:58,107 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0388 HKZ 5317 Glasses
+2024-12-18 20:47:03,524 - INFO - Driver closed.
+2024-12-18 20:47:05,850 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:47:41,528 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0393 086 5217 Glasses
+2024-12-18 20:47:46,998 - INFO - Driver closed.
+2024-12-18 20:47:49,611 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:48:02,985 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF M0079 6LB 5223 Glasses
+2024-12-18 20:48:08,435 - INFO - Driver closed.
+2024-12-18 20:48:11,095 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:48:24,464 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF0422 J5G 5717 Glasses
+2024-12-18 20:48:29,913 - INFO - Driver closed.
+2024-12-18 20:51:04,246 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:51:07,834 - INFO - A draft has been deleted
+2024-12-18 20:51:10,588 - INFO - A draft has been deleted
+2024-12-18 20:51:13,322 - INFO - A draft has been deleted
+2024-12-18 20:51:16,063 - INFO - A draft has been deleted
+2024-12-18 20:51:20,736 - INFO - Driver closed.
+2024-12-18 20:51:52,775 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:51:56,412 - INFO - A draft has been deleted
+2024-12-18 20:51:59,010 - INFO - A draft has been deleted
+2024-12-18 20:52:01,545 - INFO - A draft has been deleted
+2024-12-18 20:52:04,380 - INFO - A draft has been deleted
+2024-12-18 20:52:07,132 - INFO - A draft has been deleted
+2024-12-18 20:52:09,752 - INFO - A draft has been deleted
+2024-12-18 20:52:12,278 - INFO - A draft has been deleted
+2024-12-18 20:52:14,866 - INFO - A draft has been deleted
+2024-12-18 20:52:17,518 - INFO - A draft has been deleted
+2024-12-18 20:52:20,081 - INFO - A draft has been deleted
+2024-12-18 20:52:22,683 - INFO - A draft has been deleted
+2024-12-18 20:52:25,281 - INFO - A draft has been deleted
+2024-12-18 20:52:27,694 - INFO - A draft has been deleted
+2024-12-18 20:52:30,148 - INFO - A draft has been deleted
+2024-12-18 20:52:32,571 - INFO - A draft has been deleted
+2024-12-18 20:52:35,189 - INFO - A draft has been deleted
+2024-12-18 20:52:37,640 - INFO - A draft has been deleted
+2024-12-18 20:52:40,187 - INFO - A draft has been deleted
+2024-12-18 20:52:42,694 - INFO - A draft has been deleted
+2024-12-18 20:52:45,296 - INFO - A draft has been deleted
+2024-12-18 20:52:47,868 - INFO - A draft has been deleted
+2024-12-18 20:52:50,449 - INFO - A draft has been deleted
+2024-12-18 20:52:52,914 - INFO - A draft has been deleted
+2024-12-18 20:52:55,393 - INFO - A draft has been deleted
+2024-12-18 20:52:57,853 - INFO - A draft has been deleted
+2024-12-18 20:53:00,295 - INFO - A draft has been deleted
+2024-12-18 20:53:02,707 - INFO - A draft has been deleted
+2024-12-18 20:53:05,296 - INFO - A draft has been deleted
+2024-12-18 20:53:07,788 - INFO - A draft has been deleted
+2024-12-18 20:53:12,140 - INFO - Driver closed.
+2024-12-18 20:54:11,834 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:55:09,209 - INFO - Driver closed.
+2024-12-18 20:55:13,586 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:56:09,813 - INFO - Driver closed.
+2024-12-18 20:56:14,105 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:57:10,320 - INFO - Driver closed.
+2024-12-18 20:57:14,827 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:58:09,038 - INFO - Driver closed.
+2024-12-18 20:58:14,228 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 20:59:31,176 - INFO - Driver closed.
+2024-12-18 20:59:35,837 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:00:34,089 - INFO - Driver closed.
+2024-12-18 21:00:40,260 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:01:38,597 - INFO - Driver closed.
+2024-12-18 21:01:43,062 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:02:40,210 - INFO - Driver closed.
+2024-12-18 21:02:46,439 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:03:42,072 - INFO - Driver closed.
+2024-12-18 21:03:45,799 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:04:46,372 - INFO - Driver closed.
+2024-12-18 21:05:02,196 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:05:59,957 - INFO - Driver closed.
+2024-12-18 21:06:03,966 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 21:07:04,706 - INFO - Driver closed.

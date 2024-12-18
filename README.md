@@ -5,22 +5,28 @@
 ### **1. Clone the Repository**
 First, clone the repository from GitHub. Run the following command:
 ```bash
-git clone <repository_url>
+git clone https://github.com/DreaserousProductions/FabAutomation
 ```
-
-Replace `<repository_url>` with the URL of the GitHub repository.
 
 ### **2. Navigate to the Project Directory**
 Change to the directory where the project was cloned:
 ```bash
-cd <project_directory>
+cd FabAutomation
 ```
 
-### **3. Close All Chrome Instances**
+### **3. Setup the Package**
+Setup the package by running the following command:
+```bash
+python setup.py install
+```
+
+### **4. Close All Chrome Instances**
 Ensure all running instances of Chrome are closed before starting the script. You can do this manually.
 
-### **4. Run the Script**
+### **5. Run the Script**
 Start the automation process by running:
 ```bash
 python main.py
 ```
+
+### WARNING: MAKE SURE TO ONLY USE THE **UPLOAD SINGLE 3D MODEL** OPTION FOR NOW. OTHER OPTIONS **UNDER DEVELOPMENT**.

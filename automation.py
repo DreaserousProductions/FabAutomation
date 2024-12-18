@@ -59,39 +59,35 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
         input_list[0].find_element(By.TAG_NAME, 'input').send_keys(folder_path.split("/")[-1])
         
         if desc_text:
-            description = driver.find_element(By.CSS_SELECTOR, '.tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose')
+            description = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose')))
             driver.execute_script("arguments[0].innerHTML = arguments[1];", description, '<p>{}</p>'.format(desc_text))
         
         category = input_list[2].find_element(By.TAG_NAME, 'input')
         category.click()
-        list_of_cats = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Dropdown-container li')
+        list_of_cats = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Dropdown-container li .fabkit-TreeSelectOption-label')))
         for i in list_of_cats:
-            WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-TreeSelectOption-label')))
-            if i.find_element(By.CLASS_NAME, 'fabkit-TreeSelectOption-label').get_attribute('innerHTML').replace("&amp;", "&") == cat_text:
+            if i.get_attribute('innerHTML').replace("&amp;", "&") == cat_text:
                 i.click()
                 break
 
-        time.sleep(1)
-
-        agreement_inputs = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Radio-root.fabkit-Radio--md')
+        agreement_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Radio-root.fabkit-Radio--md')))
         agreement_inputs[0].click()
 
-        time.sleep(1)
-
-        price_inputs = driver.find_elements(By.CSS_SELECTOR, '.fabkit-InputContainer-root.fabkit-InputContainer--md')
+        price_inputs = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-InputContainer-root.fabkit-InputContainer--md')))
         price_inputs[5].click()
-        time.sleep(0.1)
-        price_dropdown = driver.find_element(By.CLASS_NAME, 'fabkit-Dropdown-container')
-        price_list = price_dropdown.find_elements(By.TAG_NAME, 'li')
+        price_dropdown = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-Dropdown-container')))
+        price_list = WebDriverWait(price_dropdown, 20).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'li')))
         for i in price_list:
             if(i.get_attribute('innerHTML') == price):
                 i.click()
                 break
-        time.sleep(1)
+
+        time.sleep(0.1)
         price_inputs[6].click()
         time.sleep(0.1)
-        pro_price_dropdown = driver.find_element(By.CLASS_NAME, 'fabkit-Dropdown-container')
-        pro_price_list = pro_price_dropdown.find_elements(By.TAG_NAME, 'li')
+
+        pro_price_dropdown = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-Dropdown-container')))
+        pro_price_list = WebDriverWait(pro_price_dropdown, 20).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'li')))
         for i in pro_price_list:
             if(i.get_attribute('innerHTML') == pro_price):
                 i.click()
@@ -134,18 +130,23 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
 
         time.sleep(0.1)
 
-        driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click()
+        driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Agreements Button
 
-        upload_model_btn = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".fabkit-Surface-root.fabkit-Surface--outlined.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-scale--gutterX-spacing-5.fabkit-scale--gutterY-spacing-6.kUuzwc_J button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth")))
+        time.sleep(0.1)
+        upload_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, ".fabkit-Surface-root.fabkit-Surface--outlined.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-scale--gutterX-spacing-5.fabkit-scale--gutterY-spacing-6.kUuzwc_J button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth")))
         upload_model_btn.click()
 
-        upload_buttons = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in upload_buttons:
-            type_of_model = i.find_element(By.CSS_SELECTOR, '.fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow').get_attribute('innerHTML')
+        time.sleep(0.1)
+
+        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
+        for i in range(len(upload_buttons)):
+            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
             if(type_of_model == 'OBJ'):
-                i.click()
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                model_input = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')
+                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
+                uke_btn.click()
+                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+                uk_btn.click()
+                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
                 driver.execute_script("arguments[0].style.display = 'block';", model_input)
                 model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".obj")), None))
                 driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
@@ -157,19 +158,22 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
             )
         except Exception as e:
             print("Timed out waiting for modal to disappear.")
-            
-        upload_next_model_btn = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
+        
+        time.sleep(2)
+        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
         upload_next_model_btn.click()
 
-        time.sleep(1)
+        time.sleep(0.1)
 
-        upload_buttons = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in upload_buttons:
-            type_of_model = i.find_element(By.CSS_SELECTOR, '.fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow').get_attribute('innerHTML')
+        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
+        for i in range(len(upload_buttons)):
+            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
             if(type_of_model == 'FBX'):
-                i.click()
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                model_input = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')
+                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
+                uke_btn.click()
+                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+                uk_btn.click()
+                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
                 driver.execute_script("arguments[0].style.display = 'block';", model_input)
                 model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".fbx")), None))
                 driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
@@ -182,20 +186,21 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
         except Exception as e:
             print("Timed out waiting for modal to disappear.")
 
-        time.sleep(1)
-
-        upload_next_model_btn = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
+        time.sleep(2)
+        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
         upload_next_model_btn.click()
 
-        time.sleep(1)
+        time.sleep(0.1)
 
-        upload_buttons = WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in upload_buttons:
-            type_of_model = i.find_element(By.CSS_SELECTOR, '.fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow').get_attribute('innerHTML')
+        upload_buttons = WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
+        for i in range(len(upload_buttons)):
+            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
             if(type_of_model == 'GLB'):
-                i.click()
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                model_input = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')
+                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
+                uke_btn.click()
+                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+                uk_btn.click()
+                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
                 driver.execute_script("arguments[0].style.display = 'block';", model_input)
                 model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".glb")), None))
                 driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
@@ -208,18 +213,21 @@ def automate_listing_creation(folder_path, desc_text, cat_text, tags, price, pro
         except Exception as e:
             print("Timed out waiting for modal to disappear.")
 
-        upload_next_model_btn = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
+        time.sleep(2)
+        upload_next_model_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary.fabkit-Button--fullWidth')))
         upload_next_model_btn.click()
 
-        time.sleep(1)
+        time.sleep(0.1)
 
-        upload_buttons =  WebDriverWait(driver, 5).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
-        for i in upload_buttons:
-            type_of_model = i.find_element(By.CSS_SELECTOR, '.fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow').get_attribute('innerHTML')
+        upload_buttons =  WebDriverWait(driver, 20).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')))
+        for i in range(len(upload_buttons)):
+            type_of_model = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a .fabkit-Typography-root.fabkit-Typography--align-start.fabkit-Typography--intent-primary.fabkit-Text--md.fabkit-Text--regular.fabkit-Stack-grow')[i].get_attribute('innerHTML')
             if(type_of_model == 'Additional files'):
-                i.click()
-                driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()
-                model_input = driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')
+                uke_btn = driver.find_elements(By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-Stack--align_center.fabkit-scale--gapX-spacing-4.fabkit-scale--gapY-spacing-4.fabkit-Surface-root.fabkit-Surface--emphasis-background-elevated-high-default.fabkit-scale--radius-2.fabkit-Surface--interactive.fabkit-scale--gutterX-spacing-3.fabkit-scale--gutterY-spacing-3.option.j6NLBb2a')[i]
+                uke_btn.click()
+                uk_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+                uk_btn.click()
+                model_input = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Modal-container input.fabkit-ScreenReaderOnly-root')))
                 driver.execute_script("arguments[0].style.display = 'block';", model_input)
                 model_input.send_keys(next((os.path.join(folder_path, filename) for filename in os.listdir(folder_path) if filename.endswith(".zip")), None))
                 driver.find_element(By.CSS_SELECTOR, '.fabkit-Modal-container button.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary').click()

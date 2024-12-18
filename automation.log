@@ -1,0 +1,350 @@
+2024-12-18 11:18:58,715 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:19:02,116 - INFO - A draft has been deleted
+2024-12-18 11:19:04,631 - INFO - A draft has been deleted
+2024-12-18 11:19:07,165 - INFO - A draft has been deleted
+2024-12-18 11:19:09,692 - INFO - A draft has been deleted
+2024-12-18 11:19:12,227 - INFO - A draft has been deleted
+2024-12-18 11:19:14,743 - INFO - A draft has been deleted
+2024-12-18 11:19:17,221 - INFO - A draft has been deleted
+2024-12-18 11:19:19,777 - INFO - A draft has been deleted
+2024-12-18 11:19:22,317 - INFO - A draft has been deleted
+2024-12-18 11:19:24,854 - INFO - A draft has been deleted
+2024-12-18 11:19:27,318 - INFO - A draft has been deleted
+2024-12-18 11:19:29,821 - INFO - A draft has been deleted
+2024-12-18 11:19:32,189 - INFO - A draft has been deleted
+2024-12-18 11:19:36,609 - INFO - Driver closed.
+2024-12-18 11:28:26,528 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:28:54,737 - ERROR - Unexpected error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E7C2ED]
+	(No symbol) [0x00007FF768E7EFCC]
+	(No symbol) [0x00007FF768E7F09F]
+	(No symbol) [0x00007FF768ECB6BA]
+	(No symbol) [0x00007FF768ECA811]
+	(No symbol) [0x00007FF768EBCD9B]
+	(No symbol) [0x00007FF768EEF2FA]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 11:39:34,396 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:40:19,803 - ERROR - Unexpected error: Message: 
+
+2024-12-18 11:43:30,836 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:44:08,053 - ERROR - Unexpected error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E7C2ED]
+	(No symbol) [0x00007FF768E7EFCC]
+	(No symbol) [0x00007FF768E7F09F]
+	(No symbol) [0x00007FF768EC8C6A]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768EBC52C]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 11:44:27,438 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B4CC4170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a8c16cba8ae52c49100d62e13e33b40c
+2024-12-18 11:44:31,505 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B4CC4140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a8c16cba8ae52c49100d62e13e33b40c
+2024-12-18 11:44:35,566 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001C6B4CC47D0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/a8c16cba8ae52c49100d62e13e33b40c
+2024-12-18 11:44:43,645 - INFO - Driver closed.
+2024-12-18 11:48:52,588 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:49:11,830 - ERROR - Unexpected error: 'int' object is not iterable
+2024-12-18 11:49:50,829 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D9296723C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c4ff8ad5f0482713581ccb2613765967
+2024-12-18 11:49:54,920 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D92AE1C170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c4ff8ad5f0482713581ccb2613765967
+2024-12-18 11:49:55,462 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:49:58,984 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D92AE1CEF0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/c4ff8ad5f0482713581ccb2613765967
+2024-12-18 11:50:07,169 - INFO - Driver closed.
+2024-12-18 11:50:15,585 - ERROR - Unexpected error: 'int' object is not iterable
+2024-12-18 11:51:04,889 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:51:25,041 - ERROR - Unexpected error: Message: element click intercepted: Element <div class="fabkit-Typography-root fabkit-Typography--align-start fabkit-Typography--intent-primary fabkit-Text--md fabkit-Text--regular fabkit-Stack-grow">...</div> is not clickable at point (631, 149). Other element would receive the click: <button class="fabkit-Stack-root fabkit-Stack--align_center fabkit-scale--gapX-spacing-4 fabkit-scale--gapY-spacing-4 fabkit-Surface-root fabkit-Surface--emphasis-background-elevated-high-default fabkit-scale--radius-2 fabkit-Surface--interactive fabkit-scale--gutterX-spacing-3 fabkit-scale--gutterY-spacing-3 option j6NLBb2a" type="button" tabindex="-1">...</button>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768ED0E8E]
+	(No symbol) [0x00007FF768ECE92C]
+	(No symbol) [0x00007FF768ECBAF6]
+	(No symbol) [0x00007FF768ECAA51]
+	(No symbol) [0x00007FF768EBCBA0]
+	(No symbol) [0x00007FF768EEF2FA]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 11:54:26,416 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:54:47,608 - ERROR - Unexpected error: Message: element click intercepted: Element <div class="fabkit-Typography-root fabkit-Typography--align-start fabkit-Typography--intent-primary fabkit-Text--md fabkit-Text--regular fabkit-Stack-grow">...</div> is not clickable at point (631, 149). Other element would receive the click: <button class="fabkit-Stack-root fabkit-Stack--align_center fabkit-scale--gapX-spacing-4 fabkit-scale--gapY-spacing-4 fabkit-Surface-root fabkit-Surface--emphasis-background-elevated-high-default fabkit-scale--radius-2 fabkit-Surface--interactive fabkit-scale--gutterX-spacing-3 fabkit-scale--gutterY-spacing-3 option j6NLBb2a" type="button" tabindex="-1">...</button>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768ED0E8E]
+	(No symbol) [0x00007FF768ECE92C]
+	(No symbol) [0x00007FF768ECBAF6]
+	(No symbol) [0x00007FF768ECAA51]
+	(No symbol) [0x00007FF768EBCBA0]
+	(No symbol) [0x00007FF768EEF2FA]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 11:57:52,800 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 11:58:25,000 - ERROR - Unexpected error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E7C2ED]
+	(No symbol) [0x00007FF768E7EFCC]
+	(No symbol) [0x00007FF768E7F09F]
+	(No symbol) [0x00007FF768EC8C6A]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768EBC52C]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768EBC3F6]
+	(No symbol) [0x00007FF768EEF510]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 11:58:41,390 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C21D380E0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0bfa0d9e5fd2609e575b3b11ddf3b4e6
+2024-12-18 11:58:45,460 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C21D38170>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0bfa0d9e5fd2609e575b3b11ddf3b4e6
+2024-12-18 11:58:49,548 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000027C21D386B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/0bfa0d9e5fd2609e575b3b11ddf3b4e6
+2024-12-18 11:58:57,679 - INFO - Driver closed.
+2024-12-18 12:01:05,964 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:01:30,417 - ERROR - Unexpected error: 'WebElement' object is not subscriptable
+2024-12-18 12:02:39,784 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:03:09,321 - ERROR - Unexpected error: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768E7C2ED]
+	(No symbol) [0x00007FF768E7F308]
+	(No symbol) [0x00007FF768F106B0]
+	(No symbol) [0x00007FF768EEF2FA]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 12:04:23,622 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:05:23,303 - ERROR - Element not found: Message: no such element: Unable to locate element: {"method":"css selector","selector":".tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose"}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768EC91BE]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768F12647]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 12:06:19,779 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000265055E02C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b1b33d497ef3b15e69dc8c4de2fe6573
+2024-12-18 12:06:23,847 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000265055E0140>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b1b33d497ef3b15e69dc8c4de2fe6573
+2024-12-18 12:06:27,920 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000265055E03B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/b1b33d497ef3b15e69dc8c4de2fe6573
+2024-12-18 12:06:36,036 - INFO - Driver closed.
+2024-12-18 12:08:36,023 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:09:37,233 - ERROR - Element not found: Message: no such element: Unable to locate element: {"method":"css selector","selector":".tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose"}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768EC91BE]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768F12647]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 12:11:43,216 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:12:34,238 - ERROR - Element not found: Message: no such element: Unable to locate element: {"method":"css selector","selector":".tiptap.ProseMirror.fabkit-RichEditor-content.fabkit-RichEditor-prose"}
+  (Session info: chrome=131.0.6778.140); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768EC91BE]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768F12647]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+2024-12-18 12:13:39,900 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:13:45,218 - INFO - Driver closed.
+2024-12-18 12:14:03,320 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:14:06,809 - INFO - A draft has been deleted
+2024-12-18 12:14:09,232 - INFO - A draft has been deleted
+2024-12-18 12:14:11,601 - INFO - A draft has been deleted
+2024-12-18 12:14:14,022 - INFO - A draft has been deleted
+2024-12-18 12:14:16,488 - INFO - A draft has been deleted
+2024-12-18 12:14:18,882 - INFO - A draft has been deleted
+2024-12-18 12:14:21,298 - INFO - A draft has been deleted
+2024-12-18 12:14:23,817 - INFO - A draft has been deleted
+2024-12-18 12:14:26,140 - INFO - A draft has been deleted
+2024-12-18 12:14:28,564 - INFO - A draft has been deleted
+2024-12-18 12:14:30,880 - INFO - A draft has been deleted
+2024-12-18 12:14:35,305 - INFO - Driver closed.
+2024-12-18 12:15:05,380 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:15:57,414 - INFO - Driver closed.
+2024-12-18 12:17:39,896 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:17:43,409 - INFO - A draft has been deleted
+2024-12-18 12:17:47,716 - INFO - Driver closed.
+2024-12-18 12:18:59,360 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:19:58,894 - INFO - Driver closed.
+2024-12-18 12:20:03,156 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:20:59,019 - INFO - Driver closed.
+2024-12-18 12:21:03,231 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:22:00,642 - INFO - Driver closed.
+2024-12-18 12:22:04,774 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:23:07,953 - INFO - Driver closed.
+2024-12-18 12:23:11,084 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-18 12:23:22,770 - ERROR - Unexpected error: Message: 
+Stacktrace:
+	GetHandleVerifier [0x00007FF769066CC5+28821]
+	(No symbol) [0x00007FF768FD3850]
+	(No symbol) [0x00007FF768E7578A]
+	(No symbol) [0x00007FF768EC91BE]
+	(No symbol) [0x00007FF768EC94AC]
+	(No symbol) [0x00007FF768F12647]
+	(No symbol) [0x00007FF768EEF33F]
+	(No symbol) [0x00007FF768F0F412]
+	(No symbol) [0x00007FF768EEF0A3]
+	(No symbol) [0x00007FF768EBA778]
+	(No symbol) [0x00007FF768EBB8E1]
+	GetHandleVerifier [0x00007FF76939FCCD+3408029]
+	GetHandleVerifier [0x00007FF7693B743F+3504143]
+	GetHandleVerifier [0x00007FF7693AB61D+3455469]
+	GetHandleVerifier [0x00007FF76912BDCB+835995]
+	(No symbol) [0x00007FF768FDEB6F]
+	(No symbol) [0x00007FF768FDA824]
+	(No symbol) [0x00007FF768FDA9BD]
+	(No symbol) [0x00007FF768FCA1A9]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+

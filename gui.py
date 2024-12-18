@@ -292,6 +292,9 @@ class AutomationGUI(QMainWindow):
         if selected_tag != "Select Tags" and selected_tag not in self.selected_tags and len(self.selected_tags) <= 15:
             self.selected_tags.append(selected_tag)
             self.update_selected_tags_display()
+        elif selected_tag in self.selected_tags:
+            self.selected_tags.remove(selected_tag)
+            self.update_selected_tags_display()
 
     def update_selected_tags_display(self):
         self.selected_tags_label.setText(f"Selected Tags: {', '.join(self.selected_tags)}")
@@ -311,13 +314,13 @@ class AutomationGUI(QMainWindow):
         
         else:
             self.progress_bar = QProgressBar(self)
-            self.progress_bar.setRange(0, len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs]))
+            self.progress_bar.setRange(0, len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs])+1)
             self.progress_bar.setValue(1)
             layout.addWidget(self.progress_bar)
 
             for root, dirs, files in os.walk(folder_path):
                 for dir_name in dirs:
-                    folder_path = os.path.join(root, dir_name)
+                    folder_path = f"{root}/{dir_name}"
                     self.worker_thread = AutomationWorker(folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
                     self.worker_thread.status_signal.connect(self.update_status)
                     self.worker_thread.start()

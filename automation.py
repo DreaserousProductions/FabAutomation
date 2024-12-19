@@ -56,13 +56,13 @@ def initialize_driver(headless=False):
     
     return driver
 
-def automate_listing_creation(headless, folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review):
+def automate_listing_creation(headless, folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review, product_type):
     driver = initialize_driver(headless)
     try:
         driver.get(WEBSITE_URL)
         log_info(f"Opened URL: {WEBSITE_URL}")
 
-        info_init(driver)
+        info_init(driver, product_type)
         
         # =========================== Information Input Page =========================== #
         input_list = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.tKmud1ea .fabkit-InputContainer-root.fabkit-InputContainer--md')))
@@ -124,10 +124,13 @@ def automate_listing_creation(headless, folder_path, desc_text, cat_text, tags, 
         driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Disallow use by Generative AI Programs
         time.sleep(0.1)
 
-        file_upload(driver, folder_path, "OBJ", ".obj")
-        file_upload_next(driver, folder_path, "FBX", ".fbx")
-        file_upload_next(driver, folder_path, "GLB", ".glb")
-        file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
+        if(product_type == "3D Model"):
+            file_upload(driver, folder_path, "OBJ", ".obj")
+            file_upload_next(driver, folder_path, "FBX", ".fbx")
+            file_upload_next(driver, folder_path, "GLB", ".glb")
+            file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
+        else:
+            file_upload(driver, folder_path, "Additional files", ".zip", True, additional_desc)
 
         if(submit_for_review):
             submit_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')
@@ -232,7 +235,7 @@ def automate_listing_edit(headless, folder_path, tags, price, pro_price, additio
         driver.quit()
         log_info("Driver closed.")
 
-def automate_listing_creation_bulk(headless, m_folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review):
+def automate_listing_creation_bulk(headless, m_folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review, product_type):
     driver = initialize_driver(headless)
     for root, dirs, files in os.walk(m_folder_path):
             for dir_name in dirs:
@@ -241,7 +244,7 @@ def automate_listing_creation_bulk(headless, m_folder_path, desc_text, cat_text,
                     driver.get(WEBSITE_URL)
                     log_info(f"Opened URL: {WEBSITE_URL}")
 
-                    info_init(driver)
+                    info_init(driver, product_type)
                     
                     # =========================== Information Input Page =========================== #
                     input_list = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.tKmud1ea .fabkit-InputContainer-root.fabkit-InputContainer--md')))
@@ -303,10 +306,13 @@ def automate_listing_creation_bulk(headless, m_folder_path, desc_text, cat_text,
                     driver.find_element(By.CSS_SELECTOR, '.fabkit-Checkbox-root.fabkit-Checkbox--md input').click() # Disallow use by Generative AI Programs
                     time.sleep(0.1)
 
-                    file_upload(driver, folder_path, "OBJ", ".obj")
-                    file_upload_next(driver, folder_path, "FBX", ".fbx")
-                    file_upload_next(driver, folder_path, "GLB", ".glb")
-                    file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
+                    if(product_type == "3D Model"):
+                        file_upload(driver, folder_path, "OBJ", ".obj")
+                        file_upload_next(driver, folder_path, "FBX", ".fbx")
+                        file_upload_next(driver, folder_path, "GLB", ".glb")
+                        file_upload_next(driver, folder_path, "Additional files", ".zip", True, additional_desc)
+                    else:
+                        file_upload(driver, folder_path, "Additional files", ".zip", True, additional_desc)
 
                     if(submit_for_review):
                         submit_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')

@@ -6,17 +6,25 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # =================================================== Create Option =================================================== #
 
-def info_init(driver):
+def info_init(driver, product_type):
         time.sleep(3)
         create_listings = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Hidden-down--mobile')))
         create_listings[1].click()
 
-        asset_3d = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, '3d-model')))
-        asset_3d.click()
+        if(product_type == "3D Model"):
+            asset_3d = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, '3d-model')))
+            asset_3d.click()
 
-        confirm_selection = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-        if confirm_selection.get_attribute('aria-label') == "Confirm selected option: 3d-model":
-            confirm_selection.click()
+            confirm_selection = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+            if confirm_selection.get_attribute('aria-label') == "Confirm selected option: 3d-model":
+                confirm_selection.click()
+        elif(product_type == "Textures"):
+            texture = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'material')))
+            texture.click()
+
+            confirm_selection = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
+            if confirm_selection.get_attribute('aria-label') == "Confirm selected option: material":
+                confirm_selection.click()
 
 def price_select(driver, price):
     price_dropdown = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'fabkit-Dropdown-container')))

@@ -14,7 +14,7 @@ class AutomationWorker(QThread):
     status_signal = pyqtSignal(str)  # Signal to send status updates
     finished_signal = pyqtSignal()   # Signal to indicate completion
 
-    def __init__(self, headless, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review):
+    def __init__(self, headless, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review, product_type):
         super().__init__()
         # Initialize worker parameters
         self.headless = headless
@@ -22,6 +22,7 @@ class AutomationWorker(QThread):
         self.auto_option = auto_option
         self.desc_text = desc_text
         self.cat_text = cat_text
+        self.product_type = product_type
         self.tags = tags
         self.price = price
         self.pro_price = pro_price
@@ -33,10 +34,10 @@ class AutomationWorker(QThread):
             # Emit status update indicating the task is starting
             self.status_signal.emit("Running automation...")
             
-            if self.auto_option == "Upload Single 3D Model":
-                automate_listing_creation(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
-            elif self.auto_option == "Upload Multiple 3D Model":
-                automate_listing_creation_bulk(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
+            if self.auto_option == "Upload Single Model":
+                automate_listing_creation(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review, self.product_type)
+            elif self.auto_option == "Upload Multiple Models":
+                automate_listing_creation_bulk(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review, self.product_type)
             elif self.auto_option == "Bulk Delete":
                 bulk_draft_deletion(self.headless)
             elif self.auto_option == "Edit Model":
@@ -110,8 +111,9 @@ class FolderDropWidget(QWidget):
 class AutomationGUI(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.auto_option = "Upload Single 3D Model"
+        self.auto_option = "Upload Single Model"
         self.cat_option = ""
+        self.product_type = "3D Model"
         self.selected_tags = []
         self.tags = self.initialize_tags()
         self.prices = self.initialize_prices()
@@ -198,6 +200,8 @@ class AutomationGUI(QMainWindow):
         layout = QVBoxLayout(central_widget)
 
         self.create_dropdown_section(layout)
+        layout.addSpacing(10)
+        self.create_product_dropdown_section(layout)
         self.create_description_section(layout)
         self.create_category_section(layout)
         layout.addSpacing(20)
@@ -217,9 +221,15 @@ class AutomationGUI(QMainWindow):
     # --- UI Sections ---
     def create_dropdown_section(self, layout):
         self.dropdown = QComboBox()
-        self.dropdown.addItems(["Upload Single 3D Model", "Upload Multiple 3D Model", "Edit Model", "Bulk Delete"])
+        self.dropdown.addItems(["Upload Single Model", "Upload Multiple Models", "Edit Model", "Bulk Delete"])
         self.dropdown.currentIndexChanged.connect(self.update_ui)
         layout.addWidget(self.dropdown)
+
+    def create_product_dropdown_section(self, layout):
+        self.p_dropdown = QComboBox()
+        self.p_dropdown.addItems(["3D Model", "Textures"])
+        self.p_dropdown.currentIndexChanged.connect(self.update_product)
+        layout.addWidget(self.p_dropdown)
 
     def create_description_section(self, layout):
         self.label = QLabel("Enter model Description:")
@@ -338,13 +348,13 @@ class AutomationGUI(QMainWindow):
             else:
                 return
 
-        if automaton == 'Upload Single 3D Model' or automaton == 'Edit Model' or automaton == 'Bulk Delete':
-            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+        if automaton == 'Upload Single Model' or automaton == 'Edit Model' or automaton == 'Bulk Delete':
+            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev, self.product_type)
             self.worker_thread.status_signal.connect(self.update_status)
             self.worker_thread.start()
 
-        elif automaton == 'Upload Multiple 3D Model':
-            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+        elif automaton == 'Upload Multiple Models':
+            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev, self.product_type)
             self.worker_thread.status_signal.connect(self.update_status)
             self.worker_thread.start()
         
@@ -391,6 +401,7 @@ class AutomationGUI(QMainWindow):
             self.label.setVisible(False)
             self.textbox.setVisible(False)
             self.cat_dropdown.setVisible(False)
+            self.p_dropdown.setVisible(False)
             self.tag_dropdown.setVisible(False)
             self.selected_tags_label.setVisible(False)
             self.price_label.setVisible(False)
@@ -407,6 +418,7 @@ class AutomationGUI(QMainWindow):
             self.label.setVisible(False)
             self.textbox.setVisible(False)
             self.cat_dropdown.setVisible(False)
+            self.p_dropdown.setVisible(False)
             self.tag_dropdown.setVisible(True)
             self.selected_tags_label.setVisible(True)
             self.price_label.setVisible(True)
@@ -423,6 +435,7 @@ class AutomationGUI(QMainWindow):
             self.label.setVisible(True)
             self.textbox.setVisible(True)
             self.cat_dropdown.setVisible(True)
+            self.p_dropdown.setVisible(True)
             self.tag_dropdown.setVisible(True)
             self.selected_tags_label.setVisible(True)
             self.price_label.setVisible(True)
@@ -438,6 +451,9 @@ class AutomationGUI(QMainWindow):
         
     def update_category(self):
         self.cat_option = self.cat_dropdown.currentText()
+    
+    def update_product(self):
+        self.product_type = self.p_dropdown.currentText()
 
     def on_checkbox_toggled(self, state):
         if state == 2: 

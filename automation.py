@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoSuchElementException
+from selenium_stealth import stealth
 from config import USER_DATA_DIR, USER_AGENT, WEBSITE_URL
 from fallback import handle_error
 from logger import log_info
@@ -41,6 +42,16 @@ def initialize_driver(headless=False):
 
     # Initialize WebDriver
     driver = webdriver.Chrome(service=driver_service, options=chrome_options)
+
+    stealth(driver,
+        languages=["en-US", "en"],
+        vendor="Google Inc.",
+        platform="Win32",
+        webgl_vendor="Intel Inc.",
+        renderer="Intel Iris OpenGL Engine",
+        fix_hairline=True,
+        )
+    
     return driver
 
 def automate_listing_creation(headless, folder_path, desc_text, cat_text, tags, price, pro_price, additional_desc, submit_for_review):

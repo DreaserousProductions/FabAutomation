@@ -373,8 +373,9 @@ class AutomationGUI(QMainWindow):
                     timer.stop()
                     
                     self.progress_bar.setValue(current_value + 1000 // dir_len)
-            
+
             self.progress_bar.setValue(1000)
+            self.layout.removeWidget(self.progress_bar)
                     
 
     def update_status(self, message):

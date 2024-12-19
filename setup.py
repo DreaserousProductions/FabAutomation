@@ -35,7 +35,8 @@ setup(
     install_requires=[
         "selenium",
         "pyqt5",
-        "python-dotenv"
+        "python-dotenv",
+        "selenium_stealth"
     ],
     cmdclass={
         'install': PostInstallCommand,

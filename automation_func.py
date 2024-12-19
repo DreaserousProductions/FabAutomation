@@ -96,25 +96,8 @@ def general_upload(driver, folder_path, file_name, file_type, add_bool, add_desc
 
 # =================================================== Edit Option =================================================== #
 
-def edit_init(driver, file_name):
+def edit_init(driver, file_name, scroll_pause_time=0.1):
     time.sleep(1)
-    select_edit_element(driver, file_name)
-    time.sleep(2)
-    
-    # time.sleep(3)
-    # listings = WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column ul li')))
-    # for i in listings:
-    #     ...
-
-    # asset_3d = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, '3d-model')))
-    # asset_3d.click()
-
-    # confirm_selection = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--primary')))
-    # if confirm_selection.get_attribute('aria-label') == "Confirm selected option: 3d-model":
-    #     confirm_selection.click()
-
-# Scroll and collect all dynamically loaded elements
-def select_edit_element(driver, file_name, scroll_pause_time=0.1):
     SCROLLABLE_CONTAINER_SELECTOR = '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column'
     ELEMENTS_SELECTOR = 'ul li'
 
@@ -149,3 +132,5 @@ def select_edit_element(driver, file_name, scroll_pause_time=0.1):
         # Check if scrolling reaches the bottom
         scroll_height += 1500
         count += 1
+    
+    time.sleep(2)

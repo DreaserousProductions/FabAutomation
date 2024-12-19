@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
 )
 from PyQt5.QtCore import QThread, pyqtSignal, Qt, QEventLoop, QTimer
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent
-from automation import automate_listing_creation, automate_listing_edit, bulk_draft_deletion
+from automation import automate_listing_creation, automate_listing_creation_bulk, automate_listing_edit, bulk_draft_deletion
 
 # --- Worker Thread ---
 class AutomationWorker(QThread):
@@ -33,11 +33,11 @@ class AutomationWorker(QThread):
             # Emit status update indicating the task is starting
             self.status_signal.emit("Running automation...")
             
-            if self.auto_option == "Upload Single 3D Model" or self.auto_option == "Upload Multiple 3D Model":
-                # Call the automation function for model upload
+            if self.auto_option == "Upload Single 3D Model":
                 automate_listing_creation(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
+            elif self.auto_option == "Upload Multiple 3D Model":
+                automate_listing_creation_bulk(self.headless, self.folder_path, self.desc_text, self.cat_text, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
             elif self.auto_option == "Bulk Delete":
-                # Call the bulk deletion function
                 bulk_draft_deletion(self.headless)
             elif self.auto_option == "Edit Model":
                 automate_listing_edit(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
@@ -342,41 +342,45 @@ class AutomationGUI(QMainWindow):
             self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
             self.worker_thread.status_signal.connect(self.update_status)
             self.worker_thread.start()
+
+        elif automaton == 'Upload Multiple 3D Model':
+            self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+            self.worker_thread.status_signal.connect(self.update_status)
+            self.worker_thread.start()
         
-        else:
-            dir_len = len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs])
-            self.progress_bar = QProgressBar(self)
-            self.progress_bar.setRange(0, 1000)
-            self.progress_bar.setValue(0)
-            layout.addWidget(self.progress_bar)
+        # else:
+        #     dir_len = len([dir for root, dirs, files in os.walk(folder_path) for dir in dirs])
+        #     self.progress_bar = QProgressBar(self)
+        #     self.progress_bar.setRange(0, 1000)
+        #     self.progress_bar.setValue(0)
+        #     layout.addWidget(self.progress_bar)
 
-            for root, dirs, files in os.walk(folder_path):
-                for dir_name in dirs:
-                    folder_path = f"{root}/{dir_name}"
-                    self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
-                    self.worker_thread.status_signal.connect(self.update_status)
+        #     for root, dirs, files in os.walk(folder_path):
+        #         for dir_name in dirs:
+        #             folder_path = f"{root}/{dir_name}"
+        #             self.worker_thread = AutomationWorker(self.headless, folder_path, self.auto_option, desc_text, self.cat_option, self.selected_tags, self.price_dropdown.currentText(), self.pro_price_dropdown.currentText(), self.add_textbox.toPlainText(), self.submit_for_rev)
+        #             self.worker_thread.status_signal.connect(self.update_status)
                     
-                    current_value = self.progress_bar.value()
-                    QApplication.processEvents()
+        #             current_value = self.progress_bar.value()
+        #             QApplication.processEvents()
 
-                    self.worker_thread.start()
-                    # self.worker_thread.wait()
+        #             self.worker_thread.start()
+        #             # self.worker_thread.wait()
                     
-                    loop = QEventLoop()
-                    self.worker_thread.finished_signal.connect(loop.quit)
+        #             loop = QEventLoop()
+        #             self.worker_thread.finished_signal.connect(loop.quit)
 
-                    timer = QTimer()
-                    timer.timeout.connect(lambda: self.periodic_function(current_value, dir_len))
-                    timer.start(100)
+        #             timer = QTimer()
+        #             timer.timeout.connect(lambda: self.periodic_function(current_value, dir_len))
+        #             timer.start(100)
 
-                    loop.exec_()
-                    timer.stop()
+        #             loop.exec_()
+        #             timer.stop()
                     
-                    self.progress_bar.setValue(current_value + 1000 // dir_len)
+        #             self.progress_bar.setValue(current_value + 1000 // dir_len)
 
-            self.progress_bar.setValue(1000)
-            self.layout.removeWidget(self.progress_bar)
-                    
+        #     self.progress_bar.setValue(1000)
+        #     self.layout.removeWidget(self.progress_bar)
 
     def update_status(self, message):
         self.status_label.setText(message)

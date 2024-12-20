@@ -452,7 +452,7 @@ def bulk_draft_deletion(headless):
 
             listings = check_listing.find_elements(By.TAG_NAME, 'li')
 
-            if len(listings) >= list_num:
+            if len(listings) <= list_num:
                 break
 
             # Check the first listing

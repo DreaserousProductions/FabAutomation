@@ -336,3 +336,73 @@ C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0232 807 531
 2024-12-19 20:35:37,970 - INFO - Opened URL: https://fab.com/portal/listings
 2024-12-19 20:36:29,081 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0232 807 5315 Glasses
 2024-12-19 20:36:32,242 - INFO - Driver Closed
+2024-12-20 10:52:54,981 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:53:09,051 - ERROR - Unexpected error: Message: 
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF 0167 F0G 5019 Glasses
+2024-12-20 10:53:14,810 - INFO - Driver closed.
+2024-12-20 10:53:34,988 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:53:41,131 - INFO - Driver closed.
+2024-12-20 10:54:12,269 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:54:17,484 - INFO - Driver closed.
+2024-12-20 10:54:46,816 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:54:52,614 - INFO - Driver closed.
+2024-12-20 10:55:45,348 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:55:48,881 - INFO - A draft has been deleted
+2024-12-20 10:55:51,412 - INFO - A draft has been deleted
+2024-12-20 10:55:53,715 - INFO - A draft has been deleted
+2024-12-20 10:55:56,212 - INFO - A draft has been deleted
+2024-12-20 10:55:58,626 - INFO - A draft has been deleted
+2024-12-20 10:56:01,251 - INFO - A draft has been deleted
+2024-12-20 10:56:06,561 - INFO - Driver closed.
+2024-12-20 10:57:44,394 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 10:59:11,785 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0167 F0G 5019 Glasses
+2024-12-20 10:59:20,476 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:00:14,994 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0232 807 5315 Glasses
+2024-12-20 11:00:18,195 - INFO - Driver Closed
+2024-12-20 11:16:18,574 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:17:49,908 - INFO - Driver closed.
+2024-12-20 11:19:38,309 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:20:33,718 - ERROR - Unexpected error: Message: element click intercepted: Element <button class="fabkit-Button-root fabkit-Button--md fabkit-Button--primary fabkit-Button--fullWidth" type="button" aria-describedby="noFormatError noFormatDesc">...</button> is not clickable at point (236, 410). Other element would receive the click: <div role="presentation" class="fabkit-Modal-overlay"></div>
+  (Session info: chrome=131.0.6778.140)
+Stacktrace:
+	GetHandleVerifier [0x00007FF73F6FFB05+28789]
+	(No symbol) [0x00007FF73F6686E0]
+	(No symbol) [0x00007FF73F50592A]
+	(No symbol) [0x00007FF73F560FDE]
+	(No symbol) [0x00007FF73F55EA7C]
+	(No symbol) [0x00007FF73F55BC46]
+	(No symbol) [0x00007FF73F55ABA1]
+	(No symbol) [0x00007FF73F54CD60]
+	(No symbol) [0x00007FF73F57F43A]
+	(No symbol) [0x00007FF73F54C5B6]
+	(No symbol) [0x00007FF73F57F650]
+	(No symbol) [0x00007FF73F59F654]
+	(No symbol) [0x00007FF73F57F1E3]
+	(No symbol) [0x00007FF73F54A938]
+	(No symbol) [0x00007FF73F54BAA1]
+	GetHandleVerifier [0x00007FF73FA3933D+3410093]
+	GetHandleVerifier [0x00007FF73FA4E7DD+3497293]
+	GetHandleVerifier [0x00007FF73FA42A73+3448803]
+	GetHandleVerifier [0x00007FF73F7C7BBB+848171]
+	(No symbol) [0x00007FF73F673C3F]
+	(No symbol) [0x00007FF73F66F6E4]
+	(No symbol) [0x00007FF73F66F87D]
+	(No symbol) [0x00007FF73F65ED49]
+	BaseThreadInitThunk [0x00007FF89FBC259D+29]
+	RtlUserThreadStart [0x00007FF8A164AF38+40]
+
+C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test files/Fendi - FF0422 J5G 5717 Glasses
+2024-12-20 11:20:38,900 - INFO - Driver closed.
+2024-12-20 11:21:08,142 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:22:17,215 - INFO - Driver closed.
+2024-12-20 11:32:05,297 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:32:54,447 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0376 09Q 5415 Glasses
+2024-12-20 11:32:56,453 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:33:45,576 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/test/Fendi - FF 0385 KB7 5317 Glasses
+2024-12-20 11:33:48,779 - INFO - Driver Closed
+2024-12-20 11:37:04,355 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:37:50,231 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/edit/Fendi - FF 0167 F0G 5019 Glasses
+2024-12-20 11:37:52,709 - INFO - Opened URL: https://fab.com/portal/listings
+2024-12-20 11:38:35,933 - INFO - C:/Users/Naghul/Documents/Zero/Freelancer/project#1/edit/Fendi - FF 0232 807 5315 Glasses
+2024-12-20 11:38:39,105 - INFO - Driver Closed

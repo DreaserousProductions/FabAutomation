@@ -17,7 +17,7 @@ class PostInstallCommand(install):
         if user:
             user_data_dir = f"C:/Users/{user}/AppData/Local/Google/Chrome/User Data"
             with open(env_file_path, "a") as env_file:
-                env_file.write(f"\nUSER_DATA_DIR={user_data_dir}\n")
+                env_file.write(f"\nUSER_DATA_DIR={user_data_dir}")
             print(f"Updated .env with USER_DATA_DIR: {user_data_dir}")
         else:
             print("Could not determine the user. .env file not updated.")

@@ -42,7 +42,7 @@ class AutomationWorker(QThread):
             elif self.auto_option == "Edit Model":
                 automate_listing_edit(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
             elif self.auto_option == "Edit Multiple Models":
-                automate_listing_edit_bulk(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
+                automate_listing_edit_bulk(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review, self.progress_signal)
             elif self.auto_option == "Bulk Delete":
                 bulk_draft_deletion(self.headless)
 
@@ -307,7 +307,7 @@ class AutomationGUI(QMainWindow):
         folder_path = self.folder_drop_widget.folder_path
         description_text = self.description_textbox.toPlainText()
         if not folder_path or not self.category_option:
-            if self.automation_option == 'Bulk Delete':
+            if self.automation_option == 'Bulk Delete' or self.automation_option == 'Edit Multiple Models':
                 ...
             else:
                 self.status_label.setText("Missing required fields.")

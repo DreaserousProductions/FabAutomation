@@ -14,7 +14,7 @@ from fallback import handle_error
 from logger import log_info
 from automation_func import (
     info_init, price_select, upload_images_func, file_upload, file_upload_next,
-    edit_init
+    edit_init, delete_init, delete_commit
     )
 
 def kill_existing_chrome():
@@ -440,6 +440,9 @@ def bulk_draft_deletion(headless):
         log_info(f"Opened URL: {WEBSITE_URL}")
         time.sleep(2)
 
+        draft_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'draft')))
+        draft_btn.click()
+
         list_num = 0
         while True:
             time.sleep(1)
@@ -479,6 +482,47 @@ def bulk_draft_deletion(headless):
                 time.sleep(1)
             else:
                 list_num += 1
+
+    except NoSuchElementException as e:
+        print("EOF")
+    except Exception as e:
+        handle_error(driver, "Unexpected error: " + str(e))
+    finally:
+        driver.quit()
+        log_info("Driver closed.")
+
+def select_drafts(headless, drafts_signal):
+    driver = initialize_driver(headless)
+    selected_drafts = []
+
+    try:
+        driver.get(WEBSITE_URL)
+        log_info(f"Opened URL: {WEBSITE_URL}")
+        time.sleep(2)
+
+        drafts_signal.emit(delete_init(driver))
+        
+    except NoSuchElementException as e:
+        handle_error(driver, "No such element error: " + str(e))
+    except Exception as e:
+        handle_error(driver, "Unexpected error: " + str(e))
+    finally:
+        driver.quit()
+        log_info("Driver closed.")
+
+def selective_delete(headless, drafts):
+    driver = initialize_driver(headless)
+    try:
+        driver.get(WEBSITE_URL)
+        log_info(f"Opened URL: {WEBSITE_URL}")
+        time.sleep(2)
+
+        draft_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'draft')))
+        draft_btn.click()
+
+        for i in drafts:
+            delete_commit(driver, i)
+            time.sleep(1)            
 
     except NoSuchElementException as e:
         print("EOF")

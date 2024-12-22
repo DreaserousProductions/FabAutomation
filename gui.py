@@ -1,21 +1,21 @@
 import sys
 import os
-import math
 from config import GUI_STYLE, DRAG_DROP_AREA_STYLE, PROGRESS_STYLE, TAGS, PRICES, CATEGORIES, TEXTURE_CATEGORIES
-from PyQt5.QtCore import QThread, pyqtSignal, Qt, QEventLoop, QTimer
+from PyQt5.QtCore import QThread, pyqtSignal, Qt, QTimer
 from PyQt5.QtGui import QDragEnterEvent, QDropEvent
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, QWidget, QLabel,
-                            QComboBox, QTextEdit, QHBoxLayout, QCheckBox, QProgressBar, QApplication)
+                            QComboBox, QTextEdit, QHBoxLayout, QCheckBox, QProgressBar, QApplication, QScrollArea, QSizePolicy)
 from automation import (automate_listing_creation, automate_listing_creation_bulk,
-                        automate_listing_edit, automate_listing_edit_bulk, bulk_draft_deletion)
+                        automate_listing_edit, automate_listing_edit_bulk, bulk_draft_deletion, select_drafts, selective_delete)
 
 # --- Worker Thread ---
 class AutomationWorker(QThread):
     status_signal = pyqtSignal(str)  # Signal to send status updates
     progress_signal = pyqtSignal(float)  # Signal to send status updates
+    drafts_signal = pyqtSignal(set)  # Signal to send status updates
     finished_signal = pyqtSignal()   # Signal to indicate completion
 
-    def __init__(self, headless, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review, product_type):
+    def __init__(self, headless, folder_path, auto_option, desc_text, cat_text, tags, price, pro_price, add_desc, submit_for_review, product_type, drafts):
         super().__init__()
         # Initialize worker parameters
         self.headless = headless
@@ -29,6 +29,7 @@ class AutomationWorker(QThread):
         self.pro_price = pro_price
         self.add_desc = add_desc
         self.submit_for_review = submit_for_review
+        self.drafts = drafts
 
     def run(self):
         try:
@@ -43,8 +44,11 @@ class AutomationWorker(QThread):
                 automate_listing_edit(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review)
             elif self.auto_option == "Edit Multiple Models":
                 automate_listing_edit_bulk(self.headless, self.folder_path, self.tags, self.price, self.pro_price, self.add_desc, self.submit_for_review, self.progress_signal)
-            elif self.auto_option == "Bulk Delete":
-                bulk_draft_deletion(self.headless)
+            elif self.auto_option == "Bulk Delete" and not self.drafts:
+                # bulk_draft_deletion(self.headless)
+                select_drafts(self.headless, self.drafts_signal)
+            elif self.auto_option == "Bulk Delete" and self.drafts:
+                selective_delete(self.headless, self.drafts)
 
             # Emit status update indicating the task is completed
             self.status_signal.emit("Automation completed!")
@@ -109,12 +113,14 @@ class AutomationGUI(QMainWindow):
         self.category_option = ""
         self.product_type = "3D Model"
         self.selected_tags = []
+        self.selected_drafts = []
         self.submit_for_review = False
         self.headless_mode = False
 
         # Data constants
         self.tags = TAGS
         self.prices = PRICES
+        self.drafts = []
 
         # GUI setup
         self.setStyleSheet(GUI_STYLE)
@@ -143,6 +149,7 @@ class AutomationGUI(QMainWindow):
         self.create_price_section(main_layout)
         main_layout.addSpacing(20)
         self.create_texture_description_section(main_layout)
+        self.create_drafts_dropdown(main_layout)
         self.create_folder_section(main_layout)
         self.create_submit_review_checkbox(main_layout)
         main_layout.addSpacing(5)
@@ -223,6 +230,18 @@ class AutomationGUI(QMainWindow):
         layout.addWidget(self.texture_label)
         layout.addWidget(self.texture_textbox)
 
+    def create_drafts_dropdown(self, layout):
+        self.drafts_dropdown = TagComboBox(self.drafts, self)
+        self.drafts_dropdown.tag_added.connect(self.update_drafts_option)
+        self.selected_drafts_label = QLabel("Selected Drafts: None")
+        self.selected_drafts_label.setWordWrap(True)
+
+        layout.addWidget(self.drafts_dropdown)
+        layout.addWidget(self.selected_drafts_label)
+
+        self.drafts_dropdown.setVisible(False)
+        self.selected_drafts_label.setVisible(False)
+
     def create_folder_section(self, layout):
         self.folder_drop_widget = FolderDropWidget()
         layout.addWidget(self.folder_drop_widget)
@@ -251,14 +270,24 @@ class AutomationGUI(QMainWindow):
 
         self.status_label = QLabel("Ready")
         self.status_label.setObjectName("status-label")
-        button_layout.addWidget(self.status_label)
+        self.status_label.setAlignment(Qt.AlignLeft | Qt.AlignTop)
+        scroll_area = QScrollArea()
+        scroll_area.setWidgetResizable(True)
+        scroll_area.setWidget(self.status_label)
+        scroll_area.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        button_layout.addWidget(scroll_area)
 
-        button_layout.addStretch()
+        self.del_button = QPushButton("Delete")
+        self.del_button.setMaximumWidth(200)
+        self.del_button.setObjectName("a-btn")
+        self.del_button.clicked.connect(lambda: self.start_automation_process(self.selected_drafts))
+        button_layout.addWidget(self.del_button)
+        self.del_button.setVisible(False)
 
         self.start_button = QPushButton("Start Automation")
         self.start_button.setMaximumWidth(300)
         self.start_button.setObjectName("s-btn")
-        self.start_button.clicked.connect(lambda: self.start_automation_process(layout))
+        self.start_button.clicked.connect(lambda: self.start_automation_process(self.selected_drafts))
         button_layout.addWidget(self.start_button)
 
         self.quit_button = QPushButton("Quit")
@@ -290,6 +319,11 @@ class AutomationGUI(QMainWindow):
         self.texture_label.setVisible(not is_bulk_delete)
         self.texture_textbox.setVisible(not is_bulk_delete)
         self.submit_review_checkbox.setVisible(not is_bulk_delete)
+        self.folder_drop_widget.setVisible(not is_bulk_delete)
+        self.drafts_dropdown.setVisible(is_bulk_delete)
+        self.selected_drafts_label.setVisible(is_bulk_delete)
+        self.del_button.setVisible(is_bulk_delete)
+        self.del_button.setEnabled(self.selected_drafts != [])
 
     def add_or_remove_tag(self):
         selected_tag = self.tag_dropdown.currentText()
@@ -303,11 +337,11 @@ class AutomationGUI(QMainWindow):
         tags_display = ", ".join(self.selected_tags) if self.selected_tags else "None"
         self.selected_tags_label.setText(f"Selected Tags: {tags_display}")
 
-    def start_automation_process(self, layout):
+    def start_automation_process(self, drafts):
         folder_path = self.folder_drop_widget.folder_path
         description_text = self.description_textbox.toPlainText()
         if not folder_path or not self.category_option:
-            if self.automation_option == 'Bulk Delete' or self.automation_option == 'Edit Multiple Models':
+            if self.automation_option == 'Bulk Delete' or self.automation_option == 'Edit Model' or self.automation_option == 'Edit Multiple Models':
                 ...
             else:
                 self.status_label.setText("Missing required fields.")
@@ -319,7 +353,8 @@ class AutomationGUI(QMainWindow):
             self.personal_price_dropdown.currentText(),
             self.professional_price_dropdown.currentText(),
             self.texture_textbox.toPlainText(), self.submit_for_review,
-            self.product_type
+            self.product_type,
+            drafts
         )
         
         if self.automation_option == 'Upload Multiple Models' or self.automation_option == 'Edit Multiple Models':
@@ -328,7 +363,10 @@ class AutomationGUI(QMainWindow):
 
         self.worker_thread.status_signal.connect(self.update_status_label)
         self.worker_thread.progress_signal.connect(self.update_progress_bar)
+        self.worker_thread.drafts_signal.connect(self.update_drafts)
         self.worker_thread.start()
+
+        self.selected_drafts = []
 
     def update_status_label(self, message):
         self.status_label.setText(message)
@@ -351,6 +389,19 @@ class AutomationGUI(QMainWindow):
         else:
             self.category_dropdown.clear()
             self.category_dropdown.addItems(TEXTURE_CATEGORIES)
+
+    def update_drafts_option(self):
+        selected_draft = self.drafts_dropdown.currentText()
+        if selected_draft in self.selected_drafts:
+            self.selected_drafts.remove(selected_draft)
+        elif selected_draft != "Select Drafts":
+            self.selected_drafts.append(selected_draft)
+        self.update_selected_drafts_label()
+        self.update_ui()
+
+    def update_selected_drafts_label(self):
+        drafts_dislpay = ", ".join(self.selected_drafts) if self.selected_drafts else "None"
+        self.selected_drafts_label.setText(f"Selected Drafts: {drafts_dislpay}")
 
     def update_progress_bar(self, progress):
         target_value = round(progress * 1000)
@@ -378,7 +429,10 @@ class AutomationGUI(QMainWindow):
         # Set up a QTimer to periodically update the progress bar
         self.timer = QTimer()
         self.timer.timeout.connect(step)
-        self.timer.start(duration // total_steps) 
+        self.timer.start(duration // total_steps)
+
+    def update_drafts(self, drafts):
+        self.drafts_dropdown.addItems([i for i in drafts])
 
 def main():
     app = QApplication(sys.argv)

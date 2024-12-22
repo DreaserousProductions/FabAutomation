@@ -5,6 +5,7 @@ load_dotenv()
 
 USER_DATA_DIR = os.getenv("USER_DATA_DIR")
 USER_AGENT = os.getenv("USER_AGENT")
+SCROLL_LIMIT = int(os.getenv("SCROLL_LIMIT"))
 WEBSITE_URL = "https://fab.com/portal/listings"
 # CHROMEDRIVER_PATH = os.getenv("CHROMEDRIVER_PATH") or "chromedriver"  # Default to 'chromedriver' if not set
 
@@ -20,10 +21,21 @@ GUI_STYLE = """
             }
                            
             QLabel#status-label {
-                font-size: 24px;
+                font-size: 16px;
                 letter-spacing: 2px;
+                color:black;
             }
-            
+
+            QScrollArea {
+                border-radius: 10px;
+                padding: 5px;
+                background: rgb(100, 100, 100);
+            }
+
+            QScrollArea > QWidget > QWidget {
+                background-color: transparent; /* Ensures transparency for the scroll area content */
+            }
+
             QComboBox {
                 background: rgba(100, 100, 100, 0.5);
                 color: white;
@@ -49,7 +61,6 @@ GUI_STYLE = """
                            
             QPushButton {
                 padding: 10px 0 10px;
-                min-width: 250px;
                 color: white;
                 border: 1px double gray;
                 border-radius: 5px;
@@ -58,15 +69,31 @@ GUI_STYLE = """
                 font-size: 16px;
                 font-weight: 900;
             }
+
+            QPushButton#a-btn {
+                padding: 10px 10px 10px 10px;
+                background: #00ff00;
+                color: black;
+            }
                            
             QPushButton#s-btn {
-                background: rgba(0, 180, 20, 0.8);
+                min-width: 250px;
+                color: white;
+                background: #04a199;
             }
                            
             QPushButton#q-btn {
+                min-width: 250px;
                 background: rgb(250, 40, 40);
             }
+
+            QPushButton#a-btn:disabled {
+                color: gray;
+                background-color: #d3d3d3;
+            }
         """
+                # background: rgba(0, 180, 20, 0.8);
+                #05B8CC;
 
 DRAG_DROP_AREA_STYLE = """
             QWidget {

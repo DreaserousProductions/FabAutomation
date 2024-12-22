@@ -3,6 +3,7 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from config import SCROLL_LIMIT
 
 # =================================================== Create Option =================================================== #
 
@@ -96,41 +97,122 @@ def general_upload(driver, folder_path, file_name, file_type, add_bool, add_desc
 
 # =================================================== Edit Option =================================================== #
 
-def edit_init(driver, file_name, scroll_pause_time=0.1):
+def edit_init(driver, file_name, scroll_pause_time=1):
     time.sleep(1)
+
+    draft_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'draft')))
+    draft_btn.click()
+    
     SCROLLABLE_CONTAINER_SELECTOR = '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column'
     ELEMENTS_SELECTOR = 'ul li'
 
-    # Locate the scrollable container
-    container = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, SCROLLABLE_CONTAINER_SELECTOR))
-    )
-
     # Initialize variables
-    scroll_height = 1500
+    scroll_height = 1200
     count = 0
 
-    while count < 19:
+    time.sleep(5)
+    while count < SCROLL_LIMIT:
         time.sleep(scroll_pause_time)
 
         # Get current elements
-        current_elements = container.find_elements(By.CSS_SELECTOR, ELEMENTS_SELECTOR)
+        current_elements =  WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, SCROLLABLE_CONTAINER_SELECTOR + " " + ELEMENTS_SELECTOR)))
 
         # Add new elements to the set
         for elem in current_elements:
             if (elem.find_element(By.CSS_SELECTOR, '.fabkit-Typography-ellipsisWrapper').get_attribute('innerHTML') == file_name):
                 elem.click()
-                count = 20
+                count = SCROLL_LIMIT + 1
                 break
         
-        if (count == 20):
+        if (count == SCROLL_LIMIT + 1):
             break
 
         # Scroll down
-        driver.execute_script("document.documentElement.scrollTo(0, arguments[0]);", scroll_height)
+        driver.execute_script("document.documentElement.scrollBy(0, arguments[0]);", scroll_height)
 
         # Check if scrolling reaches the bottom
-        scroll_height += 1500
         count += 1
     
     time.sleep(2)
+
+# =================================================== Delete Option =================================================== #
+
+def delete_init(driver, scroll_pause_time=0.25):
+    time.sleep(1)
+
+    draft_btn = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'draft')))
+    draft_btn.click()
+    
+    SCROLLABLE_CONTAINER_SELECTOR = '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column'
+    ELEMENTS_SELECTOR = 'ul li'
+
+    # Initialize variables
+    scroll_height = 1200
+    count = 0
+
+    set_of_drafts = set()
+
+    time.sleep(5)
+    while count < SCROLL_LIMIT:
+        time.sleep(scroll_pause_time)
+
+        # Get current elements
+        current_elements =  WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, SCROLLABLE_CONTAINER_SELECTOR + " " + ELEMENTS_SELECTOR)))
+
+        # Add new elements to the set
+        for elem in current_elements:
+            set_of_drafts.add(elem.find_element(By.CSS_SELECTOR, '.fabkit-Typography-ellipsisWrapper').get_attribute('innerHTML'))
+
+        # Scroll down
+        driver.execute_script("document.documentElement.scrollBy(0, arguments[0]);", scroll_height)
+
+        # Check if scrolling reaches the bottom
+        count += 1
+    
+    return set_of_drafts
+
+def delete_commit(driver, draft, scroll_pause_time=0.25):
+    time.sleep(1)
+    driver.execute_script("document.documentElement.scrollTo(0, 0);")
+    time.sleep(1) 
+
+    SCROLLABLE_CONTAINER_SELECTOR = '.fabkit-Stack-root.fabkit-scale--gapX-layout-6.fabkit-scale--gapY-layout-6.fabkit-Stack--column'
+    ELEMENTS_SELECTOR = 'ul li'
+
+    # Initialize variables
+    scroll_height = 1200
+    count = 0
+
+    time.sleep(3)
+    while count < SCROLL_LIMIT:
+        time.sleep(scroll_pause_time)
+
+        # Get current elements
+        current_elements =  WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, SCROLLABLE_CONTAINER_SELECTOR + " " + ELEMENTS_SELECTOR)))
+
+        # Add new elements to the set
+        for elem in current_elements:
+            if elem.find_element(By.CSS_SELECTOR, '.fabkit-Typography-ellipsisWrapper').get_attribute('innerHTML') == draft:
+                three_dot = elem.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--icon.fabkit-Button--sm.fabkit-Button--ghost')
+                three_dot.click()
+
+                # Click the delete option
+                delete_listing = driver.find_elements(By.CSS_SELECTOR, '.fabkit-List-item.fabkit-List--interactive.fabkit-List--rounded')
+                if delete_listing and len(delete_listing) > 1:
+                    delete_listing[1].click()
+
+                # Click the delete button
+                delete_btn = driver.find_element(By.CSS_SELECTOR, '.fabkit-Button-root.fabkit-Button--md.fabkit-Button--critical')
+                delete_btn.click()
+
+                count = SCROLL_LIMIT + 1
+                break
+        
+        if (count == SCROLL_LIMIT + 1):
+            break
+
+        # Scroll down
+        driver.execute_script("document.documentElement.scrollBy(0, arguments[0]);", scroll_height)
+
+        # Check if scrolling reaches the bottom
+        count += 1

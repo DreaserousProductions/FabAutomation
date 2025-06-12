@@ -1,0 +1,4 @@
+selenium
+selenium_stealth
+PyQt5
+python-dotenv

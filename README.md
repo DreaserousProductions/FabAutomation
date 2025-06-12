@@ -28,5 +28,3 @@ Start the automation process by running:
 ```bash
 python main.py
 ```
-
-### WARNING: MAKE SURE TO ONLY USE THE **UPLOAD SINGLE 3D MODEL** OPTION FOR NOW. OTHER OPTIONS **UNDER DEVELOPMENT**.
